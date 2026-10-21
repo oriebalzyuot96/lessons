@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://oriebalzyuot96.github.io/lessons/university/physics-1/">
+<meta property="og:url" content="https://oriebalzyuot96.github.io/lessons/university/physics-1/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_JO">
+<meta property="og:image" content="https://oriebalzyuot96.github.io/lessons/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="عريب الزيوت (Orieb Alzyuot)">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<title>فيزياء 1: الميكانيكا · ⁦University Physics 1 (mechanics)⁩ · دروس Orieb G</title>
+<meta name="description" content="الحركة في بعد واحد بتسارع ثابت (1D kinematics)، القانون الثاني لنيوتن على مستوى مائل مع الاحتكاك وبدونه، مبرهنة الشغل والطاقة (work–energy theorem) وحفظ الطاقة الميكانيكية، مع أمثلة محلولة.">
+<meta property="og:title" content="فيزياء 1: الميكانيكا (University Physics 1 (mechanics)) · مع المعلمة Orieb G">
+<meta property="og:description" content="ملخص تفاعلي لمساق جامعي تمهيدي مع أمثلة محلولة واختبار قصير وفيديو.">
+</head>
+<body data-page="university">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<marker id="ah-y" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f6d365"/></marker>
+<marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9ad7e8"/></marker>
+<marker id="ah-p" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f7a8bd"/></marker>
+<marker id="ah-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a6e3a1"/></marker>
+<marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f4f1e8"/></marker>
+</defs></svg>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../"><i>OG</i><span>دروس Orieb G</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="../../physics/newton-laws/" data-nav="physics">الفيزياء</a>
+      <a href="../../chemistry/mole/" data-nav="chemistry">الكيمياء</a>
+      <a href="../../#university" data-nav="university" aria-current="page">الجامعة</a>
+      <a href="../../#about" data-nav="about">عن عريب</a>
+      <a href="../../#contact" data-nav="contact">تواصل</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="lesson-hero" aria-labelledby="lesson-t">
+    <ul class="chips"><li>فيزياء جامعية</li><li class="ltr">University physics</li><li>مساق جامعي تمهيدي</li><li>10 مشهداً · 5 أسئلة</li></ul>
+    <h1 id="lesson-t">فيزياء 1: الميكانيكا <span class="en-sub ltr">⁦University Physics 1 (mechanics)⁩</span></h1>
+    <p class="lede">الحركة في بعد واحد بتسارع ثابت <span class="en" dir="ltr">⁦(1D kinematics)⁩</span>، القانون الثاني لنيوتن على مستوى مائل مع الاحتكاك وبدونه، مبرهنة الشغل والطاقة <span class="en" dir="ltr">(work–energy theorem)</span> وحفظ الطاقة الميكانيكية، مع أمثلة محلولة.</p>
+    <p class="note" role="note"><span aria-hidden="true">🎓</span><span><b>ملاحظة:</b> ملخص تمهيدي لموضوعات مساق جامعي، والمصطلحات بالإنجليزية كما تُدرَّس عادةً في الجامعات الأردنية. طابِقه مع مخطط المساق <span class="ltr">(syllabus)</span> والمرجع المعتمد في جامعتك.</span></p>
+  </section>
+
+  <section class="stage" data-stage aria-label="الدرس مشهداً مشهداً">
+    <div class="stage-tools"><span class="counter" aria-live="polite"></span><button class="btn" type="button" data-all aria-pressed="false">عرض الدرس كاملاً</button></div>
+    <div class="stage-grid">
+      <div class="teacher">
+        <figure class="og-card" data-pose="explaining" role="img" aria-label="المعلمة Orieb G تشرح"><div class="og-fig"><img class="on" src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">أهلاً بك! أنا المعلمة Orieb G.</p>
+      </div>
+      <div class="scenes">
+        <article class="scene" id="s1" data-pose="explaining" aria-labelledby="s1-t">
+          <div class="board"><h2 id="s1-t">⁦Physics 1⁩ · الميكانيكا</h2><ol class="steps"><li>معادلات الحركة بتسارع ثابت.</li><li>القانون الثاني لنيوتن على مستوى مائل.</li><li>مبرهنة الشغل والطاقة وحفظ الطاقة.</li></ol></div>
+          <p class="say">أهلاً! أنا المعلمة Orieb G. سنراجع ثلاث أفكار أساسية في ⁦Physics 1⁩: معادلات الحركة، والمستوى المائل، والطاقة.</p>
+        </article>
+
+        <article class="scene" id="s2" data-pose="pointing" aria-labelledby="s2-t">
+          <div class="board"><h2 id="s2-t">الحركة بتسارع ثابت <span class="en" dir="ltr">(constant acceleration)</span></h2><p class="formula" data-at=".3">v = v₀ + a t</p><p class="formula" data-at="1.2">x = x₀ + v₀ t + ½ a t²</p><p class="formula" data-at="2.1">⁦v² = v₀² + 2 a Δx⁩</p><p data-at="3">صالحة فقط عندما يكون <span class="eq">a</span> ثابتاً. الوحدات: <span class="eq">m, m/s, m/s², s</span>.</p></div>
+          <p class="say">عندما يكون التسارع ثابتاً نستخدم ثلاث معادلات: السرعة مع الزمن، والموقع مع الزمن، والسرعة مع الإزاحة.</p>
+        </article>
+
+        <article class="scene" id="s3" data-pose="explaining" aria-labelledby="s3-t">
+          <div class="board"><h2 id="s3-t">مثال محلول: سيارة تتسارع</h2><svg class="dia" viewBox="0 0 580 210" role="img" aria-label="سيارة تبدأ من السكون بتسارع 3 متر لكل ثانية تربيع: مواقعها بعد 0 و1 و2 و3 و4 ثوان"><line x1="30" y1="150" x2="540" y2="150" stroke="#cfd8cf" stroke-width="2"/><g class="pop" style="--d:0.4s" data-at="0.4"><rect x="18" y="118" width="44" height="22" rx="6" fill="#f6d365" opacity="0.45"/><circle cx="28" cy="142" r="6" fill="#f4f1e8"/><circle cx="52" cy="142" r="6" fill="#f4f1e8"/><text x="40" y="178" fill="#cfd8cf" font-size="17" text-anchor="middle">⁦t=0 s⁩</text><text x="40" y="198" fill="#9ad7e8" font-size="17" text-anchor="middle">⁦x=0 m⁩</text></g><g class="pop" style="--d:1s" data-at="1"><rect x="46.5" y="118" width="44" height="22" rx="6" fill="#f6d365" opacity="0.45"/><circle cx="56.5" cy="142" r="6" fill="#f4f1e8"/><circle cx="80.5" cy="142" r="6" fill="#f4f1e8"/><line x1="68.5" y1="104" x2="86.5" y2="104" stroke="#a6e3a1" stroke-width="4" marker-end="url(#ah-g)"/></g><g class="pop" style="--d:1.6s" data-at="1.6"><rect x="132" y="118" width="44" height="22" rx="6" fill="#f6d365" opacity="0.45"/><circle cx="142" cy="142" r="6" fill="#f4f1e8"/><circle cx="166" cy="142" r="6" fill="#f4f1e8"/><line x1="154" y1="104" x2="190" y2="104" stroke="#a6e3a1" stroke-width="4" marker-end="url(#ah-g)"/><text x="154" y="178" fill="#cfd8cf" font-size="17" text-anchor="middle">⁦t=2 s⁩</text><text x="154" y="198" fill="#9ad7e8" font-size="17" text-anchor="middle">⁦x=6 m⁩</text></g><g class="pop" style="--d:2.1999999999999997s" data-at="2.1999999999999997"><rect x="274.5" y="118" width="44" height="22" rx="6" fill="#f6d365" opacity="0.45"/><circle cx="284.5" cy="142" r="6" fill="#f4f1e8"/><circle cx="308.5" cy="142" r="6" fill="#f4f1e8"/><line x1="296.5" y1="104" x2="350.5" y2="104" stroke="#a6e3a1" stroke-width="4" marker-end="url(#ah-g)"/><text x="296.5" y="178" fill="#cfd8cf" font-size="17" text-anchor="middle">⁦t=3 s⁩</text><text x="296.5" y="198" fill="#9ad7e8" font-size="17" text-anchor="middle">⁦x=13.5 m⁩</text></g><g class="pop" style="--d:2.8s" data-at="2.8"><rect x="474" y="118" width="44" height="22" rx="6" fill="#f6d365" opacity="1"/><circle cx="484" cy="142" r="6" fill="#f4f1e8"/><circle cx="508" cy="142" r="6" fill="#f4f1e8"/><line x1="496" y1="104" x2="568" y2="104" stroke="#a6e3a1" stroke-width="4" marker-end="url(#ah-g)"/><text x="496" y="178" fill="#cfd8cf" font-size="17" text-anchor="middle">⁦t=4 s⁩</text><text x="496" y="198" fill="#9ad7e8" font-size="17" text-anchor="middle">⁦x=24 m⁩</text></g><text x="30" y="30" fill="#a6e3a1" font-size="20" text-anchor="start">⁦v = 3t (green arrows)⁩ · ⁦x = 1.5t²⁩</text></svg><ol class="steps"><li data-at="0.6"><span class="eq">⁦v = 0 + 3 × 4 = 12 m/s⁩</span></li><li data-at="2.0"><span class="eq">⁦Δx = 0 × 4 +⁩ ½ ⁦× 3 × 4² = 24 m⁩</span></li><li data-at="3.4"><span class="eq">⁦v² = 0 + 2 × 3 × 24 = 144 ⇒ v = 12 m/s⁩</span> ✓</li></ol></div>
+          <p class="say">سيارة تبدأ من السكون بتسارع ⁦3 m/s²⁩ لمدة ⁦4 s⁩: سرعتها ⁦12 m/s⁩ وتقطع ⁦24 m⁩، ونتحقق بالمعادلة الثالثة: 144 تساوي 144.</p>
+        </article>
+
+        <article class="scene" id="s4" data-pose="pointing" aria-labelledby="s4-t">
+          <div class="board"><h2 id="s4-t">القانون الثاني على مستوى مائل <span class="en" dir="ltr">(inclined plane)</span></h2><div class="two"><svg class="dia" viewBox="0 -36 520 306" role="img" aria-label="جسم على مستوى مائل بزاوية 30 درجة: الوزن، والقوة العمودية، ومركبتا الوزن، والاحتكاك"><polygon points="60,240 460,240 460,9" fill="#ffffff0d" stroke="#f4f1e8" stroke-width="3"/><path d="M120 240 A60 60 0 0 0 112 210" fill="none" stroke="#f6d365" stroke-width="2.5"/><text x="135" y="228" fill="#f6d365" font-size="20" text-anchor="start">⁦θ = 30°⁩</text><g transform="rotate(-30 289 82.4)"><rect x="263" y="62.400000000000006" width="52" height="40" rx="5" fill="#6b8f71" stroke="#f4f1e8" stroke-width="2"/></g><line class="grow" style="--len:100;--d:0.4s" data-grow="0.4" data-len="100" x1="289" y1="82.4" x2="289" y2="182.4" stroke="#f7a8bd" stroke-width="5" marker-end="url(#ah-p)"/><text class="pop" style="--d:0.8s" data-at="0.8" x="303" y="186.4" fill="#f7a8bd" font-size="22" text-anchor="start">mg</text><line class="grow" style="--len:87;--d:1s" data-grow="1" data-len="87" x1="289" y1="82.4" x2="245.7" y2="7.400000000000006" stroke="#9ad7e8" stroke-width="5" marker-end="url(#ah-c)"/><text class="pop" style="--d:1.4s" data-at="1.4" x="237" y="0.4000000000000057" fill="#9ad7e8" font-size="22" text-anchor="end">N = mg cosθ</text><line x1="289" y1="82.4" x2="245.7" y2="107.4" stroke="#f7a8bd" stroke-width="3" stroke-dasharray="6 5" data-at="1.6" class="pop" style="--d:1.6s"/><g class="pop" style="--d:1.8s" data-at="1.8"><text x="239" y="122.4" fill="#f7a8bd" font-size="19" text-anchor="end">mg sinθ</text></g><line x1="289" y1="82.4" x2="332.3" y2="157.4" stroke="#f7a8bd" stroke-width="3" stroke-dasharray="6 5" data-at="2" class="pop" style="--d:2s"/><g class="pop" style="--d:2.2s" data-at="2.2"><text x="339" y="152.4" fill="#f7a8bd" font-size="19" text-anchor="start">mg cosθ</text></g><line class="grow" style="--len:39;--d:2.6s" data-grow="2.6" data-len="39" x1="309" y1="70.4" x2="343" y2="50.800000000000004" stroke="#a6e3a1" stroke-width="5" marker-end="url(#ah-g)"/><text class="pop" style="--d:3s" data-at="3" x="351" y="46.400000000000006" fill="#a6e3a1" font-size="22" text-anchor="start">f_k</text></svg><div><p class="formula sm" data-at=".4">ΣF = m a</p><p data-at="1.4">على امتداد المستوى: <span class="eq">mg sinθ</span>؛ عمودياً عليه: <span class="eq">N = mg cosθ</span>.</p></div></div></div>
+          <p class="say">على المستوى المائل نحلل الوزن إلى مركبتين: mg sin θ على امتداد المستوى، وmg cos θ عمودية عليه، وتوازنها القوة العمودية.</p>
+        </article>
+
+        <article class="scene" id="s5" data-pose="explaining" aria-labelledby="s5-t">
+          <div class="board"><h2 id="s5-t">مثال محلول ⁦(1)⁩: بدون احتكاك <span class="en" dir="ltr">(frictionless)</span></h2><p class="q" data-at=".2"><span class="eq">⁦m = 5 kg⁩</span>، <span class="eq">⁦θ = 30°⁩</span>، <span class="eq">⁦g = 9.8 m/s²⁩</span></p><ol class="steps"><li data-at="0.6"><span class="eq">⁦mg sinθ = 5 × 9.8 × 0.5 = 24.5 N⁩</span></li><li data-at="2.0"><span class="eq">⁦a = g sinθ = 9.8 × 0.5 = 4.9 m/s²⁩</span></li><li data-at="3.4"><span class="eq">⁦N = mg cosθ = 49 × 0.866 ≈ 42.4 N⁩</span></li></ol></div>
+          <p class="say">جسم ⁦5 kg⁩ على مستوى أملس بزاوية 30 درجة: التسارع g sin θ يساوي ⁦4.9 m/s²⁩، والقوة العمودية نحو ⁦42.4 N⁩.</p>
+        </article>
+
+        <article class="scene" id="s6" data-pose="pointing" aria-labelledby="s6-t">
+          <div class="board"><h2 id="s6-t">مثال محلول ⁦(2)⁩: مع الاحتكاك <span class="en" dir="ltr">(kinetic friction)</span></h2><p class="q" data-at=".2">الجسم نفسه ينزلق إلى الأسفل، <span class="eq">⁦μ_k = 0.2⁩</span></p><ol class="steps"><li data-at="0.6"><span class="eq">⁦f_k = μ_k N = 0.2 × 42.44 ≈ 8.49 N⁩</span></li><li data-at="2.0"><span class="eq">⁦ΣF = 24.5 − 8.49 ≈ 16.0 N⁩</span></li><li data-at="3.4"><span class="eq">⁦a = 16.0 ÷ 5 ≈ 3.20 m/s²⁩</span></li><li data-at="4.8"><span class="eq">⁦a = g(sinθ − μ_k cosθ) ≈ 3.20 m/s²⁩</span> ✓</li></ol></div>
+          <p class="say">مع معامل احتكاك حركي 0.2: الاحتكاك نحو ⁦8.49 N⁩ عكس الحركة، فالقوة المحصلة نحو ⁦16.0 N⁩ والتسارع نحو ⁦3.20 m/s²⁩.</p>
+        </article>
+
+        <article class="scene" id="s7" data-pose="explaining" aria-labelledby="s7-t">
+          <div class="board"><h2 id="s7-t">الشغل والطاقة <span class="en" dir="ltr">(work–energy theorem)</span></h2><p class="formula sm" data-at=".3">W = F d cosφ · W_net = ΔK = ½mv² − ½mv₀²</p><p class="q" data-at="1.2">جسم <span class="eq">⁦2 kg⁩</span> ساكن على سطح أملس، تسحبه قوة أفقية <span class="eq">⁦10 N⁩</span> مسافة <span class="eq">⁦3 m⁩</span>.</p><ol class="steps"><li data-at="0.6"><span class="eq">⁦W = 10 × 3 × cos0° = 30 J⁩</span></li><li data-at="2.0"><span class="eq">⁦30 =⁩ ½ ⁦× 2 × v² ⇒ v² = 30⁩</span></li><li data-at="3.4"><span class="eq">⁦v = √30 ≈ 5.48 m/s⁩</span></li></ol></div>
+          <p class="say">الشغل المحصل يساوي التغير في الطاقة الحركية. قوة ⁦10 N⁩ على جسم ⁦2 kg⁩ مسافة ⁦3 m⁩ تبذل ⁦30 J⁩، فتصبح سرعته نحو ⁦5.48 m/s⁩.</p>
+        </article>
+
+        <article class="scene" id="s8" data-pose="pointing" aria-labelledby="s8-t">
+          <div class="board"><h2 id="s8-t">حفظ الطاقة الميكانيكية <span class="en" dir="ltr">(conservation of energy)</span></h2><svg class="dia" viewBox="0 0 560 260" role="img" aria-label="كرة تنزلق من ارتفاع 5 أمتار على منحدر أملس: الطاقة الكامنة تتحول إلى حركية"><path class="grow" style="--len:520;--d:0.2s" data-grow="0.2" data-len="520" d="M60 50 C180 50 220 220 360 220 L470 220" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="60" cy="38" r="12" fill="#f6d365"/><g class="pop" style="--d:1.4s" data-at="1.4"><circle cx="440" cy="208" r="12" fill="#f6d365"/></g><line x1="40" y1="50" x2="40" y2="220" stroke="#cfd8cf" stroke-width="2" stroke-dasharray="5 5"/><text x="30" y="140" fill="#cfd8cf" font-size="19" text-anchor="end">⁦h = 5 m⁩</text><g class="pop" style="--d:0.4s" data-at="0.4"><rect x="90" y="78" width="100" height="14" rx="4" fill="#f7a8bd"/><text x="80" y="90" fill="#f7a8bd" font-size="19" text-anchor="end">U</text></g><g class="pop" style="--d:0.4s" data-at="0.4"><rect x="90" y="108" width="2" height="14" rx="4" fill="#a6e3a1"/><text x="80" y="120" fill="#a6e3a1" font-size="19" text-anchor="end">K</text></g><g class="pop" style="--d:1.6s" data-at="1.6"><rect x="430" y="78" width="2" height="14" rx="4" fill="#f7a8bd"/><text x="420" y="90" fill="#f7a8bd" font-size="19" text-anchor="end">U</text></g><g class="pop" style="--d:1.6s" data-at="1.6"><rect x="430" y="108" width="100" height="14" rx="4" fill="#a6e3a1"/><text x="420" y="120" fill="#a6e3a1" font-size="19" text-anchor="end">K</text></g><g class="pop" style="--d:2.2s" data-at="2.2"><text x="470" y="250" fill="#f6d365" font-size="20" text-anchor="end">⁦v = √(2gh) ≈ 9.90 m/s⁩</text></g></svg><p class="formula sm" data-at="1">K₀ + U₀ = K + U · U = mgh</p><p data-at="2"><span class="eq">mgh = ½⁦mv² ⇒ v = √(2gh) = √(2 × 9.8 × 5) = √98 ≈ 9.90 m/s⁩</span></p></div>
+          <p class="say">بلا احتكاك تبقى الطاقة الميكانيكية ثابتة: تتحول الكامنة إلى حركية. من ارتفاع ⁦5 m⁩ تصل السرعة إلى نحو ⁦9.90 m/s⁩ مهما كانت الكتلة.</p>
+        </article>
+
+        <article class="scene" id="s9" data-pose="thinking" aria-labelledby="s9-t">
+          <div class="board"><h2 id="s9-t">أخطاء شائعة</h2><ul class="myth"><li data-at="0.4"><span class="x">✗ استخدام معادلات الحركة مع تسارع متغير.</span> <span class="v">✓</span> صالحة للتسارع الثابت فقط.</li><li data-at="1.6"><span class="x">✗ N = mg على المستوى المائل.</span> <span class="v">✓</span> <span class="eq">N = mg cosθ</span> (بلا قوى أخرى عمودية).</li><li data-at="2.8"><span class="x">✗ الآلة الحاسبة على الراديان.</span> <span class="v">✓</span> <span class="eq">⁦sin30° = 0.5⁩</span> بالدرجات.</li><li data-at="4.0"><span class="x">✗ حفظ الطاقة مع وجود احتكاك.</span> <span class="v">✓</span> الاحتكاك يبدد طاقة؛ استخدم مبرهنة الشغل والطاقة.</li></ul></div>
+          <p class="say">انتبه: معادلات الحركة للتسارع الثابت فقط، والقوة العمودية على المستوى المائل ليست mg، وتأكد أن الآلة الحاسبة على الدرجات.</p>
+        </article>
+
+        <article class="scene" id="s10" data-pose="happy" aria-labelledby="s10-t">
+          <div class="board"><h2 id="s10-t">الخلاصة</h2><ul><li>ثلاث معادلات للتسارع الثابت.</li><li>على المستوى المائل: <span class="eq">a = g(sinθ − μ_k cosθ)</span>.</li><li><span class="eq">W_net = ΔK</span>، وبلا احتكاك: <span class="eq">K + U</span> ثابتة.</li></ul></div>
+          <p class="say">أحسنت! جرّب الاختبار القصير على الموقع، ونحلّ مسائل واجباتك معاً في دروس خصوصية.</p>
+        </article>
+      </div>
+    </div>
+    <nav class="stage-nav" aria-label="التنقل بين المشاهد">
+      <button class="btn" type="button" data-prev>→ السابق</button>
+      <ol class="dots"></ol>
+      <button class="btn primary" type="button" data-next>التالي ←</button>
+    </nav>
+  </section>
+
+  <section class="sec" id="quiz" data-quiz aria-labelledby="quiz-t">
+    <span class="kicker">5 أسئلة · تصحيح فوري</span>
+    <h2 id="quiz-t">اختبر نفسك: فيزياء 1: الميكانيكا</h2>
+    <div class="quiz-grid">
+      <ol class="qs">
+        <li><fieldset><legend>جسم يبدأ من السكون بتسارع ثابت <span class="eq">⁦2 m/s²⁩</span>. سرعته بعد <span class="eq">⁦5 s⁩</span>:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦2.5 m/s⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦10 m/s⁩</span></button><button class="opt" type="button"><span class="ltr">⁦25 m/s⁩</span></button><button class="opt" type="button"><span class="ltr">⁦7 m/s⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦v = 0 + 2 × 5 = 10 m/s⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>الجسم نفسه: المسافة المقطوعة خلال الثواني الخمس:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦10 m⁩</span></button><button class="opt" type="button"><span class="ltr">⁦50 m⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦25 m⁩</span></button><button class="opt" type="button"><span class="ltr">⁦12.5 m⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">Δx = ½ ⁦× 2 × 5² = 25 m⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>تسارع جسم ينزلق على مستوى أملس زاويته <span class="eq">⁦30°⁩</span> (<span class="eq">⁦g = 9.8 m/s²⁩</span>):</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦9.8 m/s²⁩</span></button><button class="opt" type="button"><span class="ltr">⁦8.49 m/s²⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦4.9 m/s²⁩</span></button><button class="opt" type="button"><span class="ltr">⁦5.66 m/s²⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦a = g sin30° = 4.9 m/s²⁩</span>. (⁦8.49 =⁩ <span class="eq">⁦g cos30°⁩</span>.)</p></fieldset></li>
+        <li><fieldset><legend>قوة <span class="eq">⁦20 N⁩</span> تحرّك جسماً <span class="eq">⁦4 m⁩</span> في اتجاهها. الشغل:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦5 J⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦80 J⁩</span></button><button class="opt" type="button"><span class="ltr">⁦24 J⁩</span></button><button class="opt" type="button"><span class="ltr">⁦0 J⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦W = F d cos0° = 20 × 4 = 80 J⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>كرة تسقط من السكون من ارتفاع <span class="eq">⁦20 m⁩</span> (بإهمال مقاومة الهواء). سرعتها عند الأرض تقريباً:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦14.0 m/s⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦19.8 m/s⁩</span></button><button class="opt" type="button"><span class="ltr">⁦392 m/s⁩</span></button><button class="opt" type="button"><span class="ltr">⁦9.8 m/s⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦v = √(2 × 9.8 × 20) = √392 ≈ 19.8 m/s⁩</span>.</p></fieldset></li>
+      </ol>
+      <aside class="quiz-side" aria-label="المعلمة Orieb G">
+        <figure class="og-card" data-pose="thinking" role="img" aria-label="المعلمة Orieb G تفكّر"><div class="og-fig"><img data-src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img class="on" src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">اختر إجابة، وسأشرح لك السبب فوراً.</p>
+      </aside>
+    </div>
+    <div class="quiz-foot"><p class="score" aria-live="polite"></p><button class="btn" type="button" data-reset>أعد الاختبار</button></div>
+  </section>
+
+  <section class="sec" id="videos" aria-labelledby="vid-t">
+    <h2 id="vid-t">فيديو المساق</h2>
+    <div class="vids">
+      <figure class="vid"><video controls preload="none" playsinline poster="../../assets/media/physics-1-16x9-poster.jpg" width="1920" height="1080"><source src="../../assets/media/physics-1-16x9.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/physics-1-16x9.vtt" default></video><figcaption>ملخص مصغّر ⁦(16:9)⁩ · بلا تعليق صوتي، النص على الشاشة.</figcaption></figure>
+      <figure class="vid tall"><video controls preload="none" playsinline poster="../../assets/media/physics-1-9x16-poster.jpg" width="1080" height="1920"><source src="../../assets/media/physics-1-9x16.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/physics-1-9x16.vtt" default></video><figcaption>مقطع تعريفي قصير ⁦(9:16)⁩.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="contact-t">
+  <div class="contact">
+    <div>
+      <span class="kicker">دروس خصوصية · مدرسة وجامعة</span>
+      <h2 id="contact-t">احجز درساً مع عريب</h2>
+      <p>فيزياء وكيمياء للصف العاشر والأول الثانوي والتوجيهي، ومواد جامعية من تخصصها: دوائر كهربائية 1، وإلكترونيات 1، و<span class="ltr">⁦C++⁩</span>، وفيزياء 1 و2. الحصص عن بُعد أو حضورياً، والمواعيد والتفاصيل يُتفق عليها مباشرة.</p>
+    </div>
+    <div class="ways">
+      <a class="btn primary" href="https://wa.me/962775853203" target="_blank" rel="noopener">واتساب<small class="ltr">⁦+962 77585 3203⁩</small></a>
+      <a class="btn" href="mailto:alzuotorieb9999@gmail.com?subject=%D8%AF%D8%B1%D9%88%D8%B3%20%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9">البريد الإلكتروني<small class="ltr">⁦alzuotorieb9999⁩@gmail.com</small></a>
+    </div>
+  </div>
+</section>
+  <p style="margin-top:28px"><a href="../../#university">← كل المواد الجامعية</a></p>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 عريب الزيوت · <span class="ltr">Orieb Alzyuot</span> · المعلمة Orieb G شخصية كرتونية أصلية صُمّمت لهذا الموقع.</p>
+    <p>المحتوى التعليمي مُعدّ بشكل مستقل ويتبع موضوعات المنهاج الأردني، وليس صادراً عن وزارة التربية والتعليم ولا معتمداً منها. لا يستخدم هذا الموقع ملفات تتبّع ولا أدوات إحصاء.</p>
+    <p><a href="https://oriebalzyuot96.github.io/ar/">الموقع الشخصي لعريب</a></p>
+  </div>
+</footer>
+<script type="module" src="../../assets/js/lesson.js"></script>
+</body>
+</html>

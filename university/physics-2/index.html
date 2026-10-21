@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://oriebalzyuot96.github.io/lessons/university/physics-2/">
+<meta property="og:url" content="https://oriebalzyuot96.github.io/lessons/university/physics-2/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_JO">
+<meta property="og:image" content="https://oriebalzyuot96.github.io/lessons/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="عريب الزيوت (Orieb Alzyuot)">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<title>فيزياء 2: الكهرباء والمغناطيسية · ⁦University Physics 2 (electricity & magnetism)⁩ · دروس Orieb G</title>
+<meta name="description" content="قانون كولوم (Coulomb's law)، المجال الكهربائي لشحنة نقطية، مبدأ التراكب (superposition) بمثال شحنتين، الجهد الكهربائي V = kq/r، المواسعة ومكثف متوازي اللوحين، والطاقة المخزنة U = ½CV².">
+<meta property="og:title" content="فيزياء 2: الكهرباء والمغناطيسية (University Physics 2 (electricity & magnetism)) · مع المعلمة Orieb G">
+<meta property="og:description" content="ملخص تفاعلي لمساق جامعي تمهيدي مع أمثلة محلولة واختبار قصير وفيديو.">
+</head>
+<body data-page="university">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<marker id="ah-y" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f6d365"/></marker>
+<marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9ad7e8"/></marker>
+<marker id="ah-p" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f7a8bd"/></marker>
+<marker id="ah-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a6e3a1"/></marker>
+<marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f4f1e8"/></marker>
+</defs></svg>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../"><i>OG</i><span>دروس Orieb G</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="../../physics/newton-laws/" data-nav="physics">الفيزياء</a>
+      <a href="../../chemistry/mole/" data-nav="chemistry">الكيمياء</a>
+      <a href="../../#university" data-nav="university" aria-current="page">الجامعة</a>
+      <a href="../../#about" data-nav="about">عن عريب</a>
+      <a href="../../#contact" data-nav="contact">تواصل</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="lesson-hero" aria-labelledby="lesson-t">
+    <ul class="chips"><li>فيزياء جامعية</li><li class="ltr">University physics</li><li>مساق جامعي تمهيدي</li><li>10 مشهداً · 5 أسئلة</li></ul>
+    <h1 id="lesson-t">فيزياء 2: الكهرباء والمغناطيسية <span class="en-sub ltr">⁦University Physics 2 (electricity & magnetism)⁩</span></h1>
+    <p class="lede">قانون كولوم <span class="en" dir="ltr">(Coulomb's law)</span>، المجال الكهربائي لشحنة نقطية، مبدأ التراكب <span class="en" dir="ltr">(superposition)</span> بمثال شحنتين، الجهد الكهربائي <span class="en" dir="ltr">V = kq/r</span>، المواسعة ومكثف متوازي اللوحين، والطاقة المخزنة <span class="en" dir="ltr">U = ½CV²</span>.</p>
+    <p class="note" role="note"><span aria-hidden="true">🎓</span><span><b>ملاحظة:</b> ملخص تمهيدي لموضوعات مساق جامعي، والمصطلحات بالإنجليزية كما تُدرَّس عادةً في الجامعات الأردنية. طابِقه مع مخطط المساق <span class="ltr">(syllabus)</span> والمرجع المعتمد في جامعتك.</span></p>
+  </section>
+
+  <section class="stage" data-stage aria-label="الدرس مشهداً مشهداً">
+    <div class="stage-tools"><span class="counter" aria-live="polite"></span><button class="btn" type="button" data-all aria-pressed="false">عرض الدرس كاملاً</button></div>
+    <div class="stage-grid">
+      <div class="teacher">
+        <figure class="og-card" data-pose="explaining" role="img" aria-label="المعلمة Orieb G تشرح"><div class="og-fig"><img class="on" src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">أهلاً بك! أنا المعلمة Orieb G.</p>
+      </div>
+      <div class="scenes">
+        <article class="scene" id="s1" data-pose="explaining" aria-labelledby="s1-t">
+          <div class="board"><h2 id="s1-t">⁦Physics 2⁩ · الكهرباء</h2><ol class="steps"><li>قانون كولوم.</li><li>المجال الكهربائي والتراكب.</li><li>الجهد الكهربائي.</li><li>المواسعة والطاقة في المكثف.</li></ol></div>
+          <p class="say">أهلاً! أنا المعلمة Orieb G. نراجع اليوم أساسيات الكهرباء الساكنة في ⁦Physics 2⁩: كولوم، والمجال، والجهد، والمكثفات.</p>
+        </article>
+
+        <article class="scene" id="s2" data-pose="pointing" aria-labelledby="s2-t">
+          <div class="board"><h2 id="s2-t">قانون كولوم <span class="en" dir="ltr">(Coulomb's law)</span></h2><p class="formula" data-at=".3">F = k |q₁ q₂| / r²</p><p data-at="1.4"><span class="eq">⁦k = 8.99 × 10⁹ N·m²/C²⁩</span>؛ الشحنة بالكولوم <span class="en" dir="ltr">(C)</span> والمسافة بالمتر. المتشابهة تتنافر، والمختلفة تتجاذب.</p><svg class="dia" viewBox="0 0 520 210" role="img" aria-label="شحنتان مختلفتان في الإشارة تتجاذبان بقوتين متساويتين ومتعاكستين"><circle cx="140" cy="100" r="30" fill="#f7a8bd"/><text x="140" y="110" fill="#1f3b36" font-size="36" text-anchor="middle">+</text><circle cx="380" cy="100" r="30" fill="#9ad7e8"/><text x="380" y="110" fill="#1f3b36" font-size="38" text-anchor="middle">−</text><text x="140" y="52" fill="#f7a8bd" font-size="20" text-anchor="middle">⁦q₁ = +2 μC⁩</text><text x="380" y="52" fill="#9ad7e8" font-size="20" text-anchor="middle">⁦q₂ = −3 μC⁩</text><line class="grow" style="--len:74;--d:0.6s" data-grow="0.6" data-len="74" x1="176" y1="100" x2="250" y2="100" stroke="#f6d365" stroke-width="5" marker-end="url(#ah-y)"/><text class="pop" style="--d:1s" data-at="1" x="213" y="90" fill="#f6d365" font-size="22" text-anchor="middle">F</text><line class="grow" style="--len:74;--d:0.6s" data-grow="0.6" data-len="74" x1="344" y1="100" x2="270" y2="100" stroke="#f6d365" stroke-width="5" marker-end="url(#ah-y)"/><text class="pop" style="--d:1s" data-at="1" x="307" y="90" fill="#f6d365" font-size="22" text-anchor="middle">F</text><line x1="140" y1="160" x2="380" y2="160" stroke="#cfd8cf" stroke-width="2" marker-start="url(#ah-w)" marker-end="url(#ah-w)"/><text x="260" y="186" fill="#cfd8cf" font-size="20" text-anchor="middle">⁦r = 0.3 m⁩</text></svg></div>
+          <p class="say">القوة بين شحنتين تتناسب مع حاصل ضربهما وعكسياً مع مربع المسافة. الشحنات المتشابهة تتنافر والمختلفة تتجاذب.</p>
+        </article>
+
+        <article class="scene" id="s3" data-pose="explaining" aria-labelledby="s3-t">
+          <div class="board"><h2 id="s3-t">مثال محلول: قوة كولوم</h2><p class="q" data-at=".2"><span class="eq">⁦q₁ = +2 μC⁩</span>، <span class="eq">⁦q₂ = −3 μC⁩</span>، <span class="eq">⁦r = 0.3 m⁩</span></p><ol class="steps"><li data-at="0.6"><span class="eq">⁦|q₁q₂| = (2 × 10⁻⁶)(3 × 10⁻⁶) = 6 × 10⁻¹² C²⁩</span></li><li data-at="2.0"><span class="eq">⁦F = 8.99 × 10⁹ × 6 × 10⁻¹² ÷ 0.09⁩</span></li><li data-at="3.4"><span class="eq">⁦F = 0.05394 ÷ 0.09 ≈ 0.599 N⁩</span></li><li data-at="4.8">الإشارتان مختلفتان: تجاذب.</li></ol></div>
+          <p class="say">شحنتان موجب 2 ميكرو كولوم وسالب 3 ميكرو كولوم بينهما ⁦0.3 m⁩: القوة نحو ⁦0.599 N⁩، وهي قوة تجاذب.</p>
+        </article>
+
+        <article class="scene" id="s4" data-pose="pointing" aria-labelledby="s4-t">
+          <div class="board"><h2 id="s4-t">المجال الكهربائي <span class="en" dir="ltr">(Electric field)</span></h2><svg class="dia" viewBox="0 0 540 250" role="img" aria-label="خطوط المجال الكهربائي: خارجة من الشحنة الموجبة وداخلة إلى الشحنة السالبة"><line class="grow" style="--len:58;--d:0.3s" data-grow="0.3" data-len="58" x1="172.5" y1="130" x2="227.9" y2="147.2" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.38s" data-grow="0.38" data-len="58" x1="160.4" y1="147.2" x2="195.1" y2="193.7" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.45999999999999996s" data-grow="0.45999999999999996" data-len="58" x1="140.5" y1="154" x2="141.3" y2="212" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.54s" data-grow="0.54" data-len="58" x1="120.4" y1="147.8" x2="87" y2="195.2" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.62s" data-grow="0.62" data-len="58" x1="107.8" y1="131" x2="52.9" y2="149.7" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.7s" data-grow="0.7" data-len="58" x1="107.5" y1="110" x2="52.1" y2="92.8" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.78s" data-grow="0.78" data-len="58" x1="119.6" y1="92.8" x2="84.9" y2="46.3" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.8600000000000001s" data-grow="0.8600000000000001" data-len="58" x1="139.5" y1="86" x2="138.7" y2="28" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:0.94s" data-grow="0.94" data-len="58" x1="159.6" y1="92.2" x2="193" y2="44.8" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><line class="grow" style="--len:58;--d:1.02s" data-grow="1.02" data-len="58" x1="172.2" y1="109" x2="227.1" y2="90.3" stroke="#f7a8bd" stroke-width="3" marker-end="url(#ah-p)"/><circle cx="140" cy="120" r="24" fill="#f7a8bd"/><text x="140" y="130" fill="#1f3b36" font-size="34" text-anchor="middle">+</text><line class="grow" style="--len:58;--d:1.4s" data-grow="1.4" data-len="58" x1="487.9" y1="147.2" x2="432.5" y2="130" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.48s" data-grow="1.48" data-len="58" x1="455.1" y1="193.7" x2="420.4" y2="147.2" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.5599999999999998s" data-grow="1.5599999999999998" data-len="58" x1="401.3" y1="212" x2="400.5" y2="154" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.64s" data-grow="1.64" data-len="58" x1="347" y1="195.2" x2="380.4" y2="147.8" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.72s" data-grow="1.72" data-len="58" x1="312.9" y1="149.7" x2="367.8" y2="131" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.7999999999999998s" data-grow="1.7999999999999998" data-len="58" x1="312.1" y1="92.8" x2="367.5" y2="110" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.88s" data-grow="1.88" data-len="58" x1="344.9" y1="46.3" x2="379.6" y2="92.8" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:1.96s" data-grow="1.96" data-len="58" x1="398.7" y1="28" x2="399.5" y2="86" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:2.04s" data-grow="2.04" data-len="58" x1="453" y1="44.8" x2="419.6" y2="92.2" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><line class="grow" style="--len:58;--d:2.12s" data-grow="2.12" data-len="58" x1="487.1" y1="90.3" x2="432.2" y2="109" stroke="#9ad7e8" stroke-width="3" marker-end="url(#ah-c)"/><circle cx="400" cy="120" r="24" fill="#9ad7e8"/><text x="400" y="130" fill="#1f3b36" font-size="36" text-anchor="middle">−</text></svg><p class="formula sm" data-at="1.6">E = F / q₀ = k |q| / r²  (N/C)</p><p data-at="2.4"><span class="eq">⁦E = 8.99 × 10⁹ × 2 × 10⁻⁶ ÷ 0.09 ≈ 2.00 × 10⁵ N/C⁩</span></p></div>
+          <p class="say">المجال هو القوة لكل وحدة شحنة. يتجه خارجاً من الشحنة الموجبة وداخلاً نحو السالبة. لشحنة 2 ميكرو كولوم على بعد ⁦0.3 m⁩: نحو ⁦2.00 × 10⁵ N/C⁩.</p>
+        </article>
+
+        <article class="scene" id="s5" data-pose="explaining" aria-labelledby="s5-t">
+          <div class="board"><h2 id="s5-t">مثال محلول: التراكب <span class="en" dir="ltr">(Superposition)</span></h2><svg class="dia" viewBox="0 0 540 230" role="img" aria-label="تراكب المجالات عند منتصف المسافة بين شحنة موجبة وأخرى سالبة: المجالان في الاتجاه نفسه"><circle cx="70" cy="90" r="24" fill="#f7a8bd"/><text x="70" y="100" fill="#1f3b36" font-size="34" text-anchor="middle">+</text><circle cx="470" cy="90" r="24" fill="#9ad7e8"/><text x="470" y="100" fill="#1f3b36" font-size="36" text-anchor="middle">−</text><text x="70" y="50" fill="#f7a8bd" font-size="19" text-anchor="middle">⁦+2 μC⁩</text><text x="470" y="50" fill="#9ad7e8" font-size="19" text-anchor="middle">⁦−2 μC⁩</text><circle cx="270" cy="90" r="6" fill="#f4f1e8"/><text x="270" y="70" fill="#f4f1e8" font-size="21" text-anchor="middle">P</text><line x1="70" y1="200" x2="470" y2="200" stroke="#cfd8cf" stroke-width="1.5"/><text x="170" y="222" fill="#cfd8cf" font-size="18" text-anchor="middle">⁦0.2 m⁩</text><text x="370" y="222" fill="#cfd8cf" font-size="18" text-anchor="middle">⁦0.2 m⁩</text><line class="grow" style="--len:80;--d:0.6s" data-grow="0.6" data-len="80" x1="276" y1="100" x2="356" y2="100" stroke="#f7a8bd" stroke-width="5" marker-end="url(#ah-p)"/><text class="pop" style="--d:1s" data-at="1" x="316" y="122" fill="#f7a8bd" font-size="22" text-anchor="middle">E₁</text><line class="grow" style="--len:80;--d:1.2s" data-grow="1.2" data-len="80" x1="276" y1="132" x2="356" y2="132" stroke="#9ad7e8" stroke-width="5" marker-end="url(#ah-c)"/><text class="pop" style="--d:1.6s" data-at="1.6" x="316" y="154" fill="#9ad7e8" font-size="22" text-anchor="middle">E₂</text><line class="grow" style="--len:160;--d:2s" data-grow="2" data-len="160" x1="276" y1="172" x2="436" y2="172" stroke="#f6d365" stroke-width="5" marker-end="url(#ah-y)"/><text class="pop" style="--d:2.4s" data-at="2.4" x="356" y="192" fill="#f6d365" font-size="22" text-anchor="middle">E = E₁ + E₂</text></svg><ol class="steps"><li data-at="0.6"><span class="eq">⁦E₁ = k(2 × 10⁻⁶)/0.2² = 4.495 × 10⁵ N/C → +x⁩</span></li><li data-at="2.0"><span class="eq">⁦E₂ = k(2 × 10⁻⁶)/0.2² = 4.495 × 10⁵ N/C → +x⁩</span></li><li data-at="3.4"><span class="eq">⁦E = E₁ + E₂ = 8.99 × 10⁵ N/C → +x⁩</span></li></ol></div>
+          <p class="say">عند منتصف المسافة بين موجب وسالب متساويين، المجالان في الاتجاه نفسه نحو السالبة، فنجمعهما: ⁦8.99 × 10⁵ N/C⁩.</p>
+        </article>
+
+        <article class="scene" id="s6" data-pose="pointing" aria-labelledby="s6-t">
+          <div class="board"><h2 id="s6-t">الجهد الكهربائي <span class="en" dir="ltr">(Electric potential)</span></h2><p class="formula" data-at=".3">V = k q / r   (V = J/C)</p><p data-at="1.2">كمية قياسية: نعوّض بإشارة الشحنة ونجمع جبرياً.</p><ol class="steps"><li data-at="0.6"><span class="eq">⁦q = +2 μC, r = 0.3 m: V = k q / r ≈ 5.99 × 10⁴ V⁩</span></li><li data-at="2.0"><span class="eq">عند ⁦P: V = k(+2 μC)/0.2 + k(−2 μC)/0.2 = 0⁩</span></li><li data-at="3.4">لكن <span class="eq">⁦E ≠ 0⁩</span> عند P!</li></ol></div>
+          <p class="say">الجهد كمية قياسية نجمعها جبرياً. عند منتصف المسافة بين الشحنتين السابقتين الجهد صفر، مع أن المجال ليس صفراً!</p>
+        </article>
+
+        <article class="scene" id="s7" data-pose="explaining" aria-labelledby="s7-t">
+          <div class="board"><h2 id="s7-t">المواسعة <span class="en" dir="ltr">(Capacitance)</span></h2><div class="two"><svg class="dia" viewBox="0 0 520 250" role="img" aria-label="مكثف متوازي اللوحين: شحنة موجبة وسالبة على اللوحين ومجال منتظم بينهما"><rect x="190" y="40" width="10" height="170" fill="#f7a8bd"/><rect x="320" y="40" width="10" height="170" fill="#9ad7e8"/><text x="176" y="60" fill="#f7a8bd" font-size="22" text-anchor="middle">+</text><text x="176" y="95" fill="#f7a8bd" font-size="22" text-anchor="middle">+</text><text x="176" y="130" fill="#f7a8bd" font-size="22" text-anchor="middle">+</text><text x="176" y="165" fill="#f7a8bd" font-size="22" text-anchor="middle">+</text><text x="176" y="200" fill="#f7a8bd" font-size="22" text-anchor="middle">+</text><text x="344" y="60" fill="#9ad7e8" font-size="24" text-anchor="middle">−</text><text x="344" y="95" fill="#9ad7e8" font-size="24" text-anchor="middle">−</text><text x="344" y="130" fill="#9ad7e8" font-size="24" text-anchor="middle">−</text><text x="344" y="165" fill="#9ad7e8" font-size="24" text-anchor="middle">−</text><text x="344" y="200" fill="#9ad7e8" font-size="24" text-anchor="middle">−</text><line class="grow" style="--len:106;--d:0.4s" data-grow="0.4" data-len="106" x1="206" y1="70" x2="312" y2="70" stroke="#f6d365" stroke-width="3" marker-end="url(#ah-y)"/><line class="grow" style="--len:106;--d:0.6000000000000001s" data-grow="0.6000000000000001" data-len="106" x1="206" y1="110" x2="312" y2="110" stroke="#f6d365" stroke-width="3" marker-end="url(#ah-y)"/><line class="grow" style="--len:106;--d:0.8s" data-grow="0.8" data-len="106" x1="206" y1="150" x2="312" y2="150" stroke="#f6d365" stroke-width="3" marker-end="url(#ah-y)"/><line class="grow" style="--len:106;--d:1s" data-grow="1" data-len="106" x1="206" y1="190" x2="312" y2="190" stroke="#f6d365" stroke-width="3" marker-end="url(#ah-y)"/><line x1="195" y1="232" x2="325" y2="232" stroke="#cfd8cf" stroke-width="2" marker-start="url(#ah-w)" marker-end="url(#ah-w)"/><text x="260" y="248" fill="#cfd8cf" font-size="20" text-anchor="middle">d</text><text x="195" y="28" fill="#cfd8cf" font-size="19" text-anchor="middle">area A</text><g class="pop" style="--d:1.4s" data-at="1.4"><text x="470" y="125" fill="#f6d365" font-size="20" text-anchor="middle">E (uniform)</text></g><text x="80" y="125" fill="#a6e3a1" font-size="22" text-anchor="middle">C = ε₀A/d</text></svg><div><p class="formula sm" data-at=".3">C = Q / V · C = ε₀ A / d</p><p data-at="1.2"><span class="eq">⁦ε₀ = 8.85 × 10⁻¹² F/m⁩</span></p><p data-at="2"><span class="eq">⁦C = 8.85 × 10⁻¹² × 0.02 ÷ 0.001 = 1.77 × 10⁻¹⁰ F = 177 pF⁩</span></p></div></div></div>
+          <p class="say">المواسعة هي الشحنة لكل فولت. لمكثف متوازي اللوحين: إبسيلون صفر في المساحة على المسافة. مساحة ⁦0.02 m²⁩ ومسافة ⁦1 mm⁩ تعطي ⁦177 pF⁩.</p>
+        </article>
+
+        <article class="scene" id="s8" data-pose="pointing" aria-labelledby="s8-t">
+          <div class="board"><h2 id="s8-t">الطاقة المخزنة في المكثف</h2><p class="formula" data-at=".3">U = ½ C V² = ½ ⁦Q V = Q² / 2C⁩</p><ol class="steps"><li data-at="0.6"><span class="eq">⁦Q = C V = 1.77 × 10⁻¹⁰ × 100 = 1.77 × 10⁻⁸ C⁩</span></li><li data-at="2.0"><span class="eq">U = ½ ⁦× 1.77 × 10⁻¹⁰ × 100² = 8.85 × 10⁻⁷ J⁩</span></li></ol></div>
+          <p class="say">الطاقة المخزنة نصف C في V تربيع. المكثف السابق على ⁦100 V⁩ يخزن شحنة ⁦1.77 × 10⁻⁸ C⁩ وطاقة ⁦8.85 × 10⁻⁷ J⁩.</p>
+        </article>
+
+        <article class="scene" id="s9" data-pose="thinking" aria-labelledby="s9-t">
+          <div class="board"><h2 id="s9-t">أخطاء شائعة</h2><ul class="myth"><li data-at="0.4"><span class="x">✗ نسيان التحويل: μC و mm.</span> <span class="v">✓</span> <span class="eq">⁦1 μC = 10⁻⁶ C⁩</span>، <span class="eq">⁦1 mm = 10⁻³ m⁩</span>.</li><li data-at="1.6"><span class="x">✗ جمع المجالات كأعداد.</span> <span class="v">✓</span> المجال متجه: انتبه للاتجاه.</li><li data-at="2.8"><span class="x">✗ إهمال إشارة الشحنة في الجهد.</span> <span class="v">✓</span> الجهد قياسي لكن بإشارة الشحنة.</li><li data-at="4.0"><span class="x">✗ نسيان التربيع في r².</span> <span class="v">✓</span> مضاعفة المسافة تجعل القوة ربع ما كانت.</li></ul></div>
+          <p class="say">انتبه: حوّل الميكرو كولوم والملي متر إلى الوحدات الأساسية، واجمع المجالات كمتجهات، أما الجهود فكأعداد.</p>
+        </article>
+
+        <article class="scene" id="s10" data-pose="happy" aria-labelledby="s10-t">
+          <div class="board"><h2 id="s10-t">الخلاصة</h2><ul><li><span class="eq">F = k|q₁q₂|/r²</span>، <span class="eq">E = k|q|/r²</span>.</li><li>المجالات تُجمع متجهياً، والجهود جبرياً: <span class="eq">V = kq/r</span>.</li><li><span class="eq">C = ε₀A/d</span>، <span class="eq">U = ½CV²</span>.</li></ul></div>
+          <p class="say">ممتاز! جرّب الاختبار القصير على الموقع، ونكمل معاً الدوائر والمغناطيسية في الدروس الخصوصية.</p>
+        </article>
+      </div>
+    </div>
+    <nav class="stage-nav" aria-label="التنقل بين المشاهد">
+      <button class="btn" type="button" data-prev>→ السابق</button>
+      <ol class="dots"></ol>
+      <button class="btn primary" type="button" data-next>التالي ←</button>
+    </nav>
+  </section>
+
+  <section class="sec" id="quiz" data-quiz aria-labelledby="quiz-t">
+    <span class="kicker">5 أسئلة · تصحيح فوري</span>
+    <h2 id="quiz-t">اختبر نفسك: فيزياء 2: الكهرباء والمغناطيسية</h2>
+    <div class="quiz-grid">
+      <ol class="qs">
+        <li><fieldset><legend>إذا ضاعفنا المسافة بين شحنتين، فإن قوة كولوم بينهما تصبح:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">نصف ما كانت</span></button><button class="opt" type="button" data-ok><span class="ltr">ربع ما كانت</span></button><button class="opt" type="button"><span class="ltr">ضعف ما كانت</span></button><button class="opt" type="button"><span class="ltr">أربعة أمثالها</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦F ∝ 1/r²⁩</span>: <span class="eq">⁦1/2² = 1/4⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>المجال الكهربائي لشحنة <span class="eq">⁦1 μC⁩</span> على بعد <span class="eq">⁦0.1 m⁩</span>:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦8.99 × 10⁴ N/C⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦8.99 × 10⁵ N/C⁩</span></button><button class="opt" type="button"><span class="ltr">⁦8.99 × 10³ N/C⁩</span></button><button class="opt" type="button"><span class="ltr">⁦8.99 × 10⁷ N/C⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦E = 8.99 × 10⁹ × 10⁻⁶ ÷ 0.01 = 8.99 × 10⁵ N/C⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>الجهد عند منتصف المسافة بين <span class="eq">+q</span> و<span class="eq">−q</span>:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦2kq/r⁩</span></button><button class="opt" type="button"><span class="ltr">kq/r</span></button><button class="opt" type="button" data-ok><span class="ltr">صفر</span></button><button class="opt" type="button"><span class="ltr">غير معرّف</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦kq/r + k(−q)/r = 0⁩</span>، مع أن المجال هناك ليس صفراً.</p></fieldset></li>
+        <li><fieldset><legend>مكثف متوازي اللوحين: <span class="eq">⁦A = 0.01 m²⁩</span>، <span class="eq">⁦d = 0.5 mm⁩</span>. المواسعة:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦1.77 × 10⁻¹³ F⁩</span></button><button class="opt" type="button"><span class="ltr">⁦4.43 × 10⁻¹¹ F⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦1.77 × 10⁻¹⁰ F⁩</span></button><button class="opt" type="button"><span class="ltr">⁦8.85 × 10⁻¹² F⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦C = 8.85 × 10⁻¹² × 0.01 ÷ 0.0005 = 1.77 × 10⁻¹⁰ F⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>الطاقة المخزنة في مكثف <span class="eq">⁦10 μF⁩</span> مشحون إلى <span class="eq">⁦20 V⁩</span>:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦4 mJ⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦2 mJ⁩</span></button><button class="opt" type="button"><span class="ltr">⁦0.2 mJ⁩</span></button><button class="opt" type="button"><span class="ltr">⁦200 mJ⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">U = ½ ⁦× 10 × 10⁻⁶ × 20² = 2 × 10⁻³ J = 2 mJ⁩</span>.</p></fieldset></li>
+      </ol>
+      <aside class="quiz-side" aria-label="المعلمة Orieb G">
+        <figure class="og-card" data-pose="thinking" role="img" aria-label="المعلمة Orieb G تفكّر"><div class="og-fig"><img data-src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img class="on" src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">اختر إجابة، وسأشرح لك السبب فوراً.</p>
+      </aside>
+    </div>
+    <div class="quiz-foot"><p class="score" aria-live="polite"></p><button class="btn" type="button" data-reset>أعد الاختبار</button></div>
+  </section>
+
+  <section class="sec" id="videos" aria-labelledby="vid-t">
+    <h2 id="vid-t">فيديو المساق</h2>
+    <div class="vids">
+      <figure class="vid"><video controls preload="none" playsinline poster="../../assets/media/physics-2-16x9-poster.jpg" width="1920" height="1080"><source src="../../assets/media/physics-2-16x9.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/physics-2-16x9.vtt" default></video><figcaption>ملخص مصغّر ⁦(16:9)⁩ · بلا تعليق صوتي، النص على الشاشة.</figcaption></figure>
+      <figure class="vid tall"><video controls preload="none" playsinline poster="../../assets/media/physics-2-9x16-poster.jpg" width="1080" height="1920"><source src="../../assets/media/physics-2-9x16.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/physics-2-9x16.vtt" default></video><figcaption>مقطع تعريفي قصير ⁦(9:16)⁩.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="contact-t">
+  <div class="contact">
+    <div>
+      <span class="kicker">دروس خصوصية · مدرسة وجامعة</span>
+      <h2 id="contact-t">احجز درساً مع عريب</h2>
+      <p>فيزياء وكيمياء للصف العاشر والأول الثانوي والتوجيهي، ومواد جامعية من تخصصها: دوائر كهربائية 1، وإلكترونيات 1، و<span class="ltr">⁦C++⁩</span>، وفيزياء 1 و2. الحصص عن بُعد أو حضورياً، والمواعيد والتفاصيل يُتفق عليها مباشرة.</p>
+    </div>
+    <div class="ways">
+      <a class="btn primary" href="https://wa.me/962775853203" target="_blank" rel="noopener">واتساب<small class="ltr">⁦+962 77585 3203⁩</small></a>
+      <a class="btn" href="mailto:alzuotorieb9999@gmail.com?subject=%D8%AF%D8%B1%D9%88%D8%B3%20%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9">البريد الإلكتروني<small class="ltr">⁦alzuotorieb9999⁩@gmail.com</small></a>
+    </div>
+  </div>
+</section>
+  <p style="margin-top:28px"><a href="../../#university">← كل المواد الجامعية</a></p>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 عريب الزيوت · <span class="ltr">Orieb Alzyuot</span> · المعلمة Orieb G شخصية كرتونية أصلية صُمّمت لهذا الموقع.</p>
+    <p>المحتوى التعليمي مُعدّ بشكل مستقل ويتبع موضوعات المنهاج الأردني، وليس صادراً عن وزارة التربية والتعليم ولا معتمداً منها. لا يستخدم هذا الموقع ملفات تتبّع ولا أدوات إحصاء.</p>
+    <p><a href="https://oriebalzyuot96.github.io/ar/">الموقع الشخصي لعريب</a></p>
+  </div>
+</footer>
+<script type="module" src="../../assets/js/lesson.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://oriebalzyuot96.github.io/lessons/university/circuits-1/">
+<meta property="og:url" content="https://oriebalzyuot96.github.io/lessons/university/circuits-1/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_JO">
+<meta property="og:image" content="https://oriebalzyuot96.github.io/lessons/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="عريب الزيوت (Orieb Alzyuot)">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<title>دوائر كهربائية 1 · ⁦Circuits 1⁩ · دروس Orieb G</title>
+<meta name="description" content="قانون أوم (Ohm's law)، التوصيل على التوالي والتوازي، مقسّما الجهد والتيار، قانونا كيرشوف KCL / KVL مع مثال تحليل عقد محلول، والقدرة P = VI.">
+<meta property="og:title" content="دوائر كهربائية 1 (Circuits 1) · مع المعلمة Orieb G">
+<meta property="og:description" content="ملخص تفاعلي لمساق جامعي تمهيدي مع أمثلة محلولة واختبار قصير وفيديو.">
+</head>
+<body data-page="university">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<marker id="ah-y" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f6d365"/></marker>
+<marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9ad7e8"/></marker>
+<marker id="ah-p" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f7a8bd"/></marker>
+<marker id="ah-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a6e3a1"/></marker>
+<marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f4f1e8"/></marker>
+</defs></svg>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../"><i>OG</i><span>دروس Orieb G</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="../../physics/newton-laws/" data-nav="physics">الفيزياء</a>
+      <a href="../../chemistry/mole/" data-nav="chemistry">الكيمياء</a>
+      <a href="../../#university" data-nav="university" aria-current="page">الجامعة</a>
+      <a href="../../#about" data-nav="about">عن عريب</a>
+      <a href="../../#contact" data-nav="contact">تواصل</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="lesson-hero" aria-labelledby="lesson-t">
+    <ul class="chips"><li>هندسة كهربائية</li><li class="ltr">Electrical engineering</li><li>مساق جامعي تمهيدي</li><li>12 مشهداً · 5 أسئلة</li></ul>
+    <h1 id="lesson-t">دوائر كهربائية 1 <span class="en-sub ltr">⁦Circuits 1⁩</span></h1>
+    <p class="lede">قانون أوم <span class="en" dir="ltr">(Ohm's law)</span>، التوصيل على التوالي والتوازي، مقسّما الجهد والتيار، قانونا كيرشوف <span class="en" dir="ltr">KCL / KVL</span> مع مثال تحليل عقد محلول، والقدرة <span class="en" dir="ltr">P = VI</span>.</p>
+    <p class="note" role="note"><span aria-hidden="true">🎓</span><span><b>ملاحظة:</b> ملخص تمهيدي لموضوعات مساق جامعي، والمصطلحات بالإنجليزية كما تُدرَّس عادةً في الجامعات الأردنية. طابِقه مع مخطط المساق <span class="ltr">(syllabus)</span> والمرجع المعتمد في جامعتك.</span></p>
+  </section>
+
+  <section class="stage" data-stage aria-label="الدرس مشهداً مشهداً">
+    <div class="stage-tools"><span class="counter" aria-live="polite"></span><button class="btn" type="button" data-all aria-pressed="false">عرض الدرس كاملاً</button></div>
+    <div class="stage-grid">
+      <div class="teacher">
+        <figure class="og-card" data-pose="explaining" role="img" aria-label="المعلمة Orieb G تشرح"><div class="og-fig"><img class="on" src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">أهلاً بك! أنا المعلمة Orieb G.</p>
+      </div>
+      <div class="scenes">
+        <article class="scene" id="s1" data-pose="explaining" aria-labelledby="s1-t">
+          <div class="board"><h2 id="s1-t">⁦Circuits 1⁩ في دقيقتين</h2><ol class="steps"><li>قانون أوم <span class="en" dir="ltr">(Ohm's law)</span> والقدرة <span class="en" dir="ltr">(power)</span>.</li><li>التوالي والتوازي <span class="en" dir="ltr">(series / parallel)</span>.</li><li>مقسّم الجهد ومقسّم التيار <span class="en" dir="ltr">(voltage / current divider)</span>.</li><li><span class="en" dir="ltr">KCL</span> و<span class="en" dir="ltr">KVL</span> ومثال تحليل عقد <span class="en" dir="ltr">(nodal analysis)</span> محلول.</li></ol></div>
+          <p class="say">أهلاً! أنا المعلمة Orieb G. هذا ملخص سريع لأساسيات ⁦Circuits 1⁩: قانون أوم، والتوالي والتوازي، ومقسّما الجهد والتيار، وKCL وKVL، والقدرة.</p>
+        </article>
+
+        <article class="scene" id="s2" data-pose="pointing" aria-labelledby="s2-t">
+          <div class="board"><h2 id="s2-t">قانون أوم <span class="en" dir="ltr">(Ohm's law)</span></h2><div class="two"><svg class="dia" viewBox="0 0 470 250" role="img" aria-label="دائرة بسيطة: مصدر 12 فولت ومقاومة 4 أوم ويمر تيار 3 أمبير"><polyline points="80,106 80,50 340,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="340,50 340,108 331,111.7 349,119 331,126.3 349,133.7 331,141 349,148.3 340,152 340,210" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="370" y="136" fill="#f6d365" font-size="22" text-anchor="start">⁦R = 4 Ω⁩</text><polyline points="340,210 80,210 80,154" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="80" cy="130" r="24" fill="#1f3b36" stroke="#f4f1e8" stroke-width="3.5"/><text x="80" y="125" fill="#f4f1e8" font-size="24" text-anchor="middle">+</text><text x="80" y="147" fill="#f4f1e8" font-size="26" text-anchor="middle">−</text><text x="46" y="136" fill="#f6d365" font-size="22" text-anchor="end">⁦V = 12 V⁩</text><line class="grow" style="--len:120;--d:0.6s" data-grow="0.6" data-len="120" x1="150" y1="30" x2="270" y2="30" stroke="#a6e3a1" stroke-width="5" marker-end="url(#ah-g)"/><text class="pop" style="--d:1s" data-at="1" x="210" y="20" fill="#a6e3a1" font-size="22" text-anchor="middle">⁦I = 3 A⁩</text></svg><div><p class="formula xl" data-at=".3">V = I R</p><p data-at="1.2"><span class="eq">V</span> بالفولت <span class="en" dir="ltr">(V)</span>، و<span class="eq">I</span> بالأمبير <span class="en" dir="ltr">(A)</span>، و<span class="eq">R</span> بالأوم <span class="en" dir="ltr">(Ω)</span>.</p><p data-at="2.4"><span class="eq">⁦I = V ÷ R = 12 ÷ 4 = 3 A⁩</span></p></div></div></div>
+          <p class="say">قانون أوم: الجهد يساوي التيار مضروباً في المقاومة. مع مصدر ⁦12 V⁩ ومقاومة ⁦4 Ω⁩ يمر تيار ⁦3 A⁩.</p>
+        </article>
+
+        <article class="scene" id="s3" data-pose="explaining" aria-labelledby="s3-t">
+          <div class="board"><h2 id="s3-t">القدرة <span class="en" dir="ltr">(Power)</span></h2><p class="formula" data-at=".3">P = V I = I² R = V² / R</p><p data-at="1.2">الوحدة: الواط <span class="en" dir="ltr">(W)</span>. وفق اصطلاح الإشارة السالب <span class="en" dir="ltr">(passive sign convention)</span>: إذا دخل التيار من الطرف الموجب للعنصر فإن <span class="eq">P = +VI</span> قدرة مستهلكة.</p><ol class="steps"><li data-at="0.6"><span class="eq">⁦P = 12 × 3 = 36 W⁩</span></li><li data-at="2.0"><span class="eq">⁦P = 3² × 4 = 36 W⁩</span></li><li data-at="3.4"><span class="eq">⁦P = 12² ÷ 4 = 36 W⁩</span> ✓</li></ol></div>
+          <p class="say">القدرة تساوي الجهد في التيار، وبالتعويض من قانون أوم: I تربيع R أو V تربيع على R. المقاومة السابقة تستهلك ⁦36 W⁩.</p>
+        </article>
+
+        <article class="scene" id="s4" data-pose="pointing" aria-labelledby="s4-t">
+          <div class="board"><h2 id="s4-t">التوالي والتوازي <span class="en" dir="ltr">(Series & parallel)</span></h2><p class="formula" data-at=".3">Series: R_eq = R₁ + R₂ + …</p><p class="formula" data-at="1.3">⁦Parallel: 1/R_eq = 1/R₁ + 1/R₂ +⁩ …</p><p data-at="2.4">لمقاومتين على التوازي: <span class="eq">R_eq = R₁R₂ ÷ (R₁ + R₂)</span>. مثال: <span class="eq">⁦6 ∥ 12 = 72 ÷ 18 = 4 Ω⁩</span>، وهي أصغر من أصغر مقاومة.</p></div>
+          <p class="say">على التوالي نجمع المقاومات. وعلى التوازي نجمع مقلوباتها، ولمقاومتين: حاصل الضرب على المجموع. ستة توازي اثني عشر تساوي ⁦4 Ω⁩.</p>
+        </article>
+
+        <article class="scene" id="s5" data-pose="pointing" aria-labelledby="s5-t">
+          <div class="board"><h2 id="s5-t">مقسّم الجهد <span class="en" dir="ltr">(Voltage divider)</span></h2><div class="two"><svg class="dia" viewBox="0 0 430 300" role="img" aria-label="مقسم جهد: مصدر 10 فولت ومقاومتان 2 و3 كيلو أوم، والجهد على الثانية 6 فولت"><polyline points="80,126 80,40 260,40" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="260,40 260,73 251,76.7 269,84 251,91.3 269,98.7 251,106 269,113.3 260,117 260,150" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="230" y="101" fill="#f6d365" font-size="22" text-anchor="end">⁦R₁ = 2 kΩ⁩</text><polyline points="260,150 260,183 251,186.7 269,194 251,201.3 269,208.7 251,216 269,223.3 260,227 260,260" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="230" y="211" fill="#f6d365" font-size="22" text-anchor="end">⁦R₂ = 3 kΩ⁩</text><polyline points="260,260 80,260 80,174" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="80" cy="150" r="24" fill="#1f3b36" stroke="#f4f1e8" stroke-width="3.5"/><text x="80" y="145" fill="#f4f1e8" font-size="24" text-anchor="middle">+</text><text x="80" y="167" fill="#f4f1e8" font-size="26" text-anchor="middle">−</text><text x="46" y="156" fill="#f6d365" font-size="22" text-anchor="end">⁦10 V⁩</text><polyline points="260,150 340,150" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="260,260 340,260" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="340" cy="150" r="5.5" fill="#f4f1e8"/><circle cx="340" cy="260" r="5.5" fill="#f4f1e8"/><text x="340" y="182" fill="#a6e3a1" font-size="26" text-anchor="middle">+</text><text x="340" y="248" fill="#a6e3a1" font-size="28" text-anchor="middle">−</text><g class="pop" style="--d:1.2s" data-at="1.2"><text x="360" y="212" fill="#a6e3a1" font-size="26" text-anchor="start">⁦V₂ = 6 V⁩</text></g></svg><div><p class="formula" data-at=".3">V₂ = Vₛ · R₂ ÷ (R₁ + R₂)</p><p data-at="1.4"><span class="eq">⁦V₂ = 10 × 3 ÷ (2 + 3) = 6 V⁩</span></p><p data-at="2.4">صحيح عندما لا يُسحب تيار من نقطة الخرج <span class="en" dir="ltr">(unloaded)</span>.</p></div></div></div>
+          <p class="say">مقسّم الجهد: الجهد على ⁦R2⁩ يساوي جهد المصدر في ⁦R2⁩ على مجموع المقاومتين. عشرة فولت مع 2 و3 كيلو أوم تعطي ⁦6 V⁩.</p>
+        </article>
+
+        <article class="scene" id="s6" data-pose="explaining" aria-labelledby="s6-t">
+          <div class="board"><h2 id="s6-t">مقسّم التيار <span class="en" dir="ltr">(Current divider)</span></h2><div class="two"><svg class="dia" viewBox="0 0 470 250" role="img" aria-label="مقسم تيار: تيار 3 أمبير ينقسم إلى 2 أمبير في 6 أوم و1 أمبير في 12 أوم"><polyline points="30,50 400,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="30,210 400,210" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="220,50 220,108 211,111.7 229,119 211,126.3 229,133.7 211,141 229,148.3 220,152 220,210" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="192" y="136" fill="#f6d365" font-size="22" text-anchor="end">⁦6 Ω⁩</text><polyline points="400,50 400,108 391,111.7 409,119 391,126.3 409,133.7 391,141 409,148.3 400,152 400,210" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="428" y="136" fill="#f6d365" font-size="22" text-anchor="start">⁦12 Ω⁩</text><circle cx="220" cy="50" r="5.5" fill="#f4f1e8"/><circle cx="220" cy="210" r="5.5" fill="#f4f1e8"/><line class="grow" style="--len:100;--d:0.4s" data-grow="0.4" data-len="100" x1="50" y1="30" x2="150" y2="30" stroke="#f6d365" stroke-width="5" marker-end="url(#ah-y)"/><text class="pop" style="--d:0.8s" data-at="0.8" x="100" y="20" fill="#f6d365" font-size="22" text-anchor="middle">⁦Iₛ = 3 A⁩</text><line class="grow" style="--len:60;--d:1.2s" data-grow="1.2" data-len="60" x1="242" y1="90" x2="242" y2="150" stroke="#f7a8bd" stroke-width="5" marker-end="url(#ah-p)"/><text class="pop" style="--d:1.6s" data-at="1.6" x="252" y="124" fill="#f7a8bd" font-size="22" text-anchor="start">⁦I₆ = 2 A⁩</text><line class="grow" style="--len:60;--d:1.8s" data-grow="1.8" data-len="60" x1="378" y1="90" x2="378" y2="150" stroke="#9ad7e8" stroke-width="5" marker-end="url(#ah-c)"/><text class="pop" style="--d:2.2s" data-at="2.2" x="368" y="124" fill="#9ad7e8" font-size="22" text-anchor="end">⁦I₁₂ = 1 A⁩</text></svg><div><p class="formula" data-at=".3">I₁ = Iₛ · R₂ ÷ (R₁ + R₂)</p><p data-at="1.4"><span class="eq">⁦I₆ = 3 × 12 ÷ 18 = 2 A⁩</span></p><p data-at="2.2"><span class="eq">⁦I₁₂ = 3 × 6 ÷ 18 = 1 A⁩</span></p></div></div></div>
+          <p class="say">مقسّم التيار: التيار في فرع يساوي التيار الكلي في المقاومة الأخرى على المجموع. التيار الأكبر يمر في المقاومة الأصغر.</p>
+        </article>
+
+        <article class="scene" id="s7" data-pose="pointing" aria-labelledby="s7-t">
+          <div class="board"><h2 id="s7-t">قانون كيرشوف للتيار <span class="en" dir="ltr">(KCL)</span></h2><div class="two"><svg class="dia" viewBox="0 0 380 230" role="img" aria-label="عقدة يدخلها 3 أمبير ويخرج منها 2 أمبير و1 أمبير"><polyline points="30,120 190,120" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="190,120 340,40" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="190,120 340,200" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="190" cy="120" r="5.5" fill="#f4f1e8"/><line class="grow" style="--len:100;--d:0.4s" data-grow="0.4" data-len="100" x1="50" y1="100" x2="150" y2="100" stroke="#f6d365" stroke-width="5" marker-end="url(#ah-y)"/><text class="pop" style="--d:0.8s" data-at="0.8" x="100" y="88" fill="#f6d365" font-size="22" text-anchor="middle">⁦in: 3 A⁩</text><line class="grow" style="--len:89;--d:1.2s" data-grow="1.2" data-len="89" x1="222" y1="88" x2="300" y2="46" stroke="#f7a8bd" stroke-width="5" marker-end="url(#ah-p)"/><text class="pop" style="--d:1.6s" data-at="1.6" x="244" y="44" fill="#f7a8bd" font-size="22" text-anchor="middle">⁦out: 2 A⁩</text><line class="grow" style="--len:89;--d:1.8s" data-grow="1.8" data-len="89" x1="222" y1="152" x2="300" y2="194" stroke="#9ad7e8" stroke-width="5" marker-end="url(#ah-c)"/><text class="pop" style="--d:2.2s" data-at="2.2" x="236" y="214" fill="#9ad7e8" font-size="22" text-anchor="middle">⁦out: 1 A⁩</text></svg><div><p class="law" data-at=".3">مجموع التيارات الداخلة إلى العقدة = مجموع التيارات الخارجة منها <span class="en" dir="ltr">(Σ I_in = Σ I_out)</span>.</p><p data-at="2.2"><span class="eq">⁦3 A = 2 A + 1 A⁩</span> ✓</p></div></div></div>
+          <p class="say">KCL: مجموع التيارات الداخلة إلى عقدة يساوي مجموع الخارجة منها، لأن الشحنة محفوظة. ثلاثة داخلة، واثنان وواحد خارجة.</p>
+        </article>
+
+        <article class="scene" id="s8" data-pose="pointing" aria-labelledby="s8-t">
+          <div class="board"><h2 id="s8-t">قانون كيرشوف للجهد <span class="en" dir="ltr">(KVL)</span></h2><div class="two"><svg class="dia" viewBox="0 0 460 270" role="img" aria-label="حلقة مغلقة: مصدر 24 فولت وانخفاضان 12 فولت و12 فولت"><polyline points="70,116 70,40 150,40" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="150,40 188,40 191.7,49 199,31 206.3,49 213.7,31 221,49 228.3,31 232,40 270,40" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="210" y="20" fill="#f6d365" font-size="22" text-anchor="middle">R₁</text><polyline points="270,40 340,40" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="340,40 340,113 331,116.7 349,124 331,131.3 349,138.7 331,146 349,153.3 340,157 340,230" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="368" y="141" fill="#f6d365" font-size="22" text-anchor="start">⁦R_p = 4 Ω⁩</text><polyline points="340,230 70,230 70,164" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="70" cy="140" r="24" fill="#1f3b36" stroke="#f4f1e8" stroke-width="3.5"/><text x="70" y="135" fill="#f4f1e8" font-size="24" text-anchor="middle">+</text><text x="70" y="157" fill="#f4f1e8" font-size="26" text-anchor="middle">−</text><text x="36" y="146" fill="#f6d365" font-size="22" text-anchor="end">⁦24 V⁩</text><text x="160" y="74" fill="#f7a8bd" font-size="26" text-anchor="middle">+</text><text x="260" y="74" fill="#f7a8bd" font-size="28" text-anchor="middle">−</text><g class="pop" style="--d:1s" data-at="1"><text x="210" y="84" fill="#f7a8bd" font-size="22" text-anchor="middle">⁦12 V⁩</text></g><text x="318" y="76" fill="#f7a8bd" font-size="26" text-anchor="middle">+</text><text x="318" y="206" fill="#f7a8bd" font-size="28" text-anchor="middle">−</text><g class="pop" style="--d:1.6s" data-at="1.6"><text x="306" y="146" fill="#f7a8bd" font-size="22" text-anchor="end">⁦12 V⁩</text></g><path class="grow" style="--len:300;--d:0.6s" data-grow="0.6" data-len="300" d="M150 170 A60 44 0 1 1 252 172" fill="none" stroke="#a6e3a1" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><polygon points="246,162 258,176 242,180" fill="#a6e3a1" data-at="1.4" class="pop" style="--d:1.4s"/></svg><div><p class="law" data-at=".3">المجموع الجبري للجهود حول حلقة مغلقة = صفر <span class="en" dir="ltr">⁦(Σ V = 0)⁩</span>.</p><p data-at="2"><span class="eq">⁦+24 − 12 − 12 = 0⁩</span> ✓</p></div></div></div>
+          <p class="say">KVL: المجموع الجبري للجهود حول أي حلقة مغلقة يساوي صفراً. اختر اتجاهاً واحداً للدوران والتزم به.</p>
+        </article>
+
+        <article class="scene" id="s9" data-pose="explaining" aria-labelledby="s9-t">
+          <div class="board"><h2 id="s9-t">مثال محلول ⁦(1)⁩: دائرة توالي وتوازي</h2><div class="two"><svg class="dia" viewBox="0 0 560 270" role="img" aria-label="مقاومة 4 أوم على التوالي مع مقاومتين 6 و12 أوم على التوازي، ومصدر 24 فولت"><polyline points="70,116 70,50 120,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="120,50 153,50 156.7,59 164,41 171.3,59 178.7,41 186,59 193.3,41 197,50 230,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="175" y="32" fill="#f6d365" font-size="22" text-anchor="middle">⁦R₁ = 4 Ω⁩</text><polyline points="230,50 430,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="290,50 290,113 281,116.7 299,124 281,131.3 299,138.7 281,146 299,153.3 290,157 290,220" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="260" y="141" fill="#f6d365" font-size="22" text-anchor="end">⁦6 Ω⁩</text><polyline points="430,50 430,113 421,116.7 439,124 421,131.3 439,138.7 421,146 439,153.3 430,157 430,220" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="460" y="141" fill="#f6d365" font-size="22" text-anchor="start">⁦12 Ω⁩</text><polyline points="430,220 70,220 70,164" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="290" cy="50" r="5.5" fill="#f4f1e8"/><circle cx="290" cy="220" r="5.5" fill="#f4f1e8"/><circle cx="70" cy="140" r="24" fill="#1f3b36" stroke="#f4f1e8" stroke-width="3.5"/><text x="70" y="135" fill="#f4f1e8" font-size="24" text-anchor="middle">+</text><text x="70" y="157" fill="#f4f1e8" font-size="26" text-anchor="middle">−</text><text x="36" y="146" fill="#f6d365" font-size="22" text-anchor="end">⁦24 V⁩</text><line class="grow" style="--len:44;--d:0.8s" data-grow="0.8" data-len="44" x1="236" y1="70" x2="280" y2="70" stroke="#a6e3a1" stroke-width="5" marker-end="url(#ah-g)"/><text class="pop" style="--d:1.2000000000000002s" data-at="1.2000000000000002" x="258" y="92" fill="#a6e3a1" font-size="22" text-anchor="middle">⁦I = 3 A⁩</text><line class="grow" style="--len:50;--d:1.6s" data-grow="1.6" data-len="50" x1="312" y1="90" x2="312" y2="140" stroke="#f7a8bd" stroke-width="5" marker-end="url(#ah-p)"/><text class="pop" style="--d:2s" data-at="2" x="322" y="120" fill="#f7a8bd" font-size="22" text-anchor="start">⁦2 A⁩</text><line class="grow" style="--len:50;--d:2.2s" data-grow="2.2" data-len="50" x1="408" y1="90" x2="408" y2="140" stroke="#9ad7e8" stroke-width="5" marker-end="url(#ah-c)"/><text class="pop" style="--d:2.6s" data-at="2.6" x="398" y="120" fill="#9ad7e8" font-size="22" text-anchor="end">⁦1 A⁩</text></svg><ol class="steps"><li data-at="0.6"><span class="eq">⁦R_eq = 4 + (6 ∥ 12) = 4 + 4 = 8 Ω⁩</span></li><li data-at="2.0"><span class="eq">⁦I = 24 ÷ 8 = 3 A⁩</span></li><li data-at="3.4"><span class="eq">⁦V_R₁ = 3 × 4 = 12 V ← V_p = 24 − 12 = 12 V⁩</span></li><li data-at="4.8"><span class="eq">⁦I₆ = 12 ÷ 6 = 2 A, I₁₂ = 12 ÷ 12 = 1 A⁩</span></li><li data-at="6.2"><span class="eq">⁦P: 36 + 24 + 12 = 72 W = 24 × 3⁩</span> ✓</li></ol></div></div>
+          <p class="say">المكافئة: 4 زائد 4 تساوي ⁦8 Ω⁩، فالتيار ⁦3 A⁩. جهد ⁦R1⁩ يساوي ⁦12 V⁩، والباقي ⁦12 V⁩ على الفرعين: ⁦2 A⁩ و⁦1 A⁩. والقدرات مجموعها ⁦72 W⁩.</p>
+        </article>
+
+        <article class="scene" id="s10" data-pose="thinking" aria-labelledby="s10-t">
+          <div class="board"><h2 id="s10-t">مثال محلول ⁦(2)⁩: تحليل العقد <span class="en" dir="ltr">(Nodal analysis)</span></h2><svg class="dia" viewBox="0 0 570 290" role="img" aria-label="تحليل العقد: مصدر 10 فولت عبر 2 أوم إلى العقدة a، و4 أوم إلى الأرضي، و4 أوم إلى مصدر 6 فولت"><polyline points="70,126 70,50 120,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="120,50 153,50 156.7,59 164,41 171.3,59 178.7,41 186,59 193.3,41 197,50 230,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="175" y="32" fill="#f6d365" font-size="22" text-anchor="middle">⁦2 Ω⁩</text><polyline points="230,50 330,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="330,50 363,50 366.7,59 374,41 381.3,59 388.7,41 396,59 403.3,41 407,50 440,50" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="385" y="32" fill="#f6d365" font-size="22" text-anchor="middle">⁦4 Ω⁩</text><polyline points="440,50 500,50 500,126" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><polyline points="280,50 280,118 271,121.7 289,129 271,136.3 289,143.7 271,151 289,158.3 280,162 280,230" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round"/><text x="252" y="146" fill="#f6d365" font-size="22" text-anchor="end">⁦4 Ω⁩</text><polyline points="70,174 70,230 500,230 500,174" fill="none" stroke="#f4f1e8" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="70" cy="150" r="24" fill="#1f3b36" stroke="#f4f1e8" stroke-width="3.5"/><text x="70" y="145" fill="#f4f1e8" font-size="24" text-anchor="middle">+</text><text x="70" y="167" fill="#f4f1e8" font-size="26" text-anchor="middle">−</text><text x="36" y="156" fill="#f6d365" font-size="22" text-anchor="end">⁦10 V⁩</text><circle cx="500" cy="150" r="24" fill="#1f3b36" stroke="#f4f1e8" stroke-width="3.5"/><text x="500" y="145" fill="#f4f1e8" font-size="24" text-anchor="middle">+</text><text x="500" y="167" fill="#f4f1e8" font-size="26" text-anchor="middle">−</text><text x="534" y="156" fill="#f6d365" font-size="22" text-anchor="start">⁦6 V⁩</text><circle cx="280" cy="50" r="5.5" fill="#f4f1e8"/><circle cx="280" cy="230" r="5.5" fill="#f4f1e8"/><line x1="280" y1="232" x2="280" y2="244" stroke="#f4f1e8" stroke-width="3.5"/><line x1="264" y1="244" x2="296" y2="244" stroke="#f4f1e8" stroke-width="3.5"/><line x1="270" y1="251" x2="290" y2="251" stroke="#f4f1e8" stroke-width="3.5"/><line x1="276" y1="258" x2="284" y2="258" stroke="#f4f1e8" stroke-width="3.5"/><text x="280" y="28" fill="#9ad7e8" font-size="26" text-anchor="middle">a</text><line class="grow" style="--len:74;--d:1.2s" data-grow="1.2" data-len="74" x1="140" y1="72" x2="214" y2="72" stroke="#a6e3a1" stroke-width="5" marker-end="url(#ah-g)"/><text class="pop" style="--d:1.6s" data-at="1.6" x="177" y="96" fill="#a6e3a1" font-size="22" text-anchor="middle">⁦1.75 A⁩</text><line class="grow" style="--len:70;--d:1.8s" data-grow="1.8" data-len="70" x1="302" y1="100" x2="302" y2="170" stroke="#f7a8bd" stroke-width="5" marker-end="url(#ah-p)"/><text class="pop" style="--d:2.2s" data-at="2.2" x="312" y="140" fill="#f7a8bd" font-size="22" text-anchor="start">⁦1.625 A⁩</text><line class="grow" style="--len:74;--d:2.4s" data-grow="2.4" data-len="74" x1="350" y1="72" x2="424" y2="72" stroke="#9ad7e8" stroke-width="5" marker-end="url(#ah-c)"/><text class="pop" style="--d:2.8s" data-at="2.8" x="387" y="96" fill="#9ad7e8" font-size="22" text-anchor="middle">⁦0.125 A⁩</text></svg><ol class="steps"><li data-at="0.6"><span class="eq">⁦KCL at a: (Vₐ − 10)/2 + Vₐ/4 + (Vₐ − 6)/4 = 0⁩</span></li><li data-at="2.0"><span class="eq">⁦× 4: 2Vₐ − 20 + Vₐ + Vₐ − 6 = 0 ⇒ 4Vₐ = 26⁩</span></li><li data-at="3.4"><span class="eq">⁦Vₐ = 6.5 V⁩</span></li><li data-at="4.8"><span class="eq">⁦I = 1.75 A in; 1.625 A + 0.125 A out⁩</span> ✓ KCL</li></ol></div>
+          <p class="say">نكتب KCL عند العقدة a: التيارات الخارجة مجموعها صفر. نضرب في 4 فنحصل على ⁦4 Va⁩ ناقص 26 يساوي صفراً، إذن Va يساوي ⁦6.5 V⁩.</p>
+        </article>
+
+        <article class="scene" id="s11" data-pose="thinking" aria-labelledby="s11-t">
+          <div class="board"><h2 id="s11-t">أخطاء شائعة</h2><ul class="myth"><li data-at="0.4"><span class="x">✗ جمع مقاومات التوازي مباشرة.</span> <span class="v">✓</span> على التوازي نجمع المقلوبات.</li><li data-at="1.6"><span class="x">✗ تبديل الإشارات أثناء KVL.</span> <span class="v">✓</span> اختر اتجاه دوران واحداً ودوّن إشارة كل عنصر بحسبه.</li><li data-at="2.8"><span class="x">✗ نسيان البادئات (kΩ، mA).</span> <span class="v">✓</span> <span class="eq">⁦9 V ÷ 3 kΩ = 3 mA⁩</span> وليس ⁦3 A⁩.</li><li data-at="4.0"><span class="x">✗ استخدام مقسّم الجهد مع حمل موصول.</span> <span class="v">✓</span> الحمل يغيّر المقاومة المكافئة للفرع.</li></ul></div>
+          <p class="say">انتبه: لا تجمع مقاومات التوازي مباشرة، والتزم باتجاه واحد في KVL، وحوّل الكيلو أوم قبل الحساب.</p>
+        </article>
+
+        <article class="scene" id="s12" data-pose="happy" aria-labelledby="s12-t">
+          <div class="board"><h2 id="s12-t">الخلاصة</h2><ul><li><span class="eq">V = IR</span> و<span class="eq">P = VI = I²R = V²/R</span>.</li><li>التوالي: نجمع المقاومات؛ التوازي: نجمع المقلوبات.</li><li>مقسّما الجهد والتيار.</li><li><span class="en" dir="ltr">KCL</span>: الشحنة محفوظة عند العقدة؛ <span class="en" dir="ltr">KVL</span>: مجموع الجهود في الحلقة صفر.</li></ul></div>
+          <p class="say">أحسنت! جرّب الاختبار القصير على الموقع، ويمكننا حل المزيد من المسائل معاً في دروس خصوصية.</p>
+        </article>
+      </div>
+    </div>
+    <nav class="stage-nav" aria-label="التنقل بين المشاهد">
+      <button class="btn" type="button" data-prev>→ السابق</button>
+      <ol class="dots"></ol>
+      <button class="btn primary" type="button" data-next>التالي ←</button>
+    </nav>
+  </section>
+
+  <section class="sec" id="quiz" data-quiz aria-labelledby="quiz-t">
+    <span class="kicker">5 أسئلة · تصحيح فوري</span>
+    <h2 id="quiz-t">اختبر نفسك: دوائر كهربائية 1</h2>
+    <div class="quiz-grid">
+      <ol class="qs">
+        <li><fieldset><legend>مقاومة <span class="eq">⁦3 kΩ⁩</span> عليها جهد <span class="eq">⁦9 V⁩</span>. ما التيار؟</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦3 A⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦3 mA⁩</span></button><button class="opt" type="button"><span class="ltr">⁦27 mA⁩</span></button><button class="opt" type="button"><span class="ltr">⁦0.33 mA⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦I = 9 ÷ 3000 = 0.003 A = 3 mA⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>مقاومتان <span class="eq">⁦10 Ω⁩</span> و<span class="eq">⁦10 Ω⁩</span> على التوازي. المقاومة المكافئة:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦20 Ω⁩</span></button><button class="opt" type="button"><span class="ltr">⁦10 Ω⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦5 Ω⁩</span></button><button class="opt" type="button"><span class="ltr">⁦0.2 Ω⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦10 × 10 ÷ 20 = 5 Ω⁩</span>. (0.2 هي <span class="eq">⁦1/R_eq⁩</span> قبل أخذ المقلوب.)</p></fieldset></li>
+        <li><fieldset><legend>مقسّم جهد: <span class="eq">⁦Vₛ = 12 V⁩</span>، <span class="eq">⁦R₁ = 1 kΩ⁩</span>، <span class="eq">⁦R₂ = 2 kΩ⁩</span>. الجهد على <span class="eq">R₂</span>:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦4 V⁩</span></button><button class="opt" type="button"><span class="ltr">⁦6 V⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦8 V⁩</span></button><button class="opt" type="button"><span class="ltr">⁦12 V⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦12 × 2 ÷ 3 = 8 V⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>عقدة يدخلها <span class="eq">⁦5 A⁩</span> و<span class="eq">⁦2 A⁩</span> ويخرج منها <span class="eq">⁦4 A⁩</span> وتيار مجهول <span class="eq">I</span>. قيمة <span class="eq">I</span>:</legend><div class="opts">
+          <button class="opt" type="button" data-ok><span class="ltr">⁦3 A⁩</span></button><button class="opt" type="button"><span class="ltr">⁦11 A⁩</span></button><button class="opt" type="button"><span class="ltr">⁦1 A⁩</span></button><button class="opt" type="button"><span class="ltr">⁦7 A⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="en" dir="ltr">KCL</span>: <span class="eq">⁦5 + 2 = 4 + I ⇒ I = 3 A⁩</span>.</p></fieldset></li>
+        <li><fieldset><legend>القدرة المستهلكة في مقاومة <span class="eq">⁦5 Ω⁩</span> يمر فيها <span class="eq">⁦2 A⁩</span>:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">⁦10 W⁩</span></button><button class="opt" type="button" data-ok><span class="ltr">⁦20 W⁩</span></button><button class="opt" type="button"><span class="ltr">⁦2.5 W⁩</span></button><button class="opt" type="button"><span class="ltr">⁦50 W⁩</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦P = I²R = 4 × 5 = 20 W⁩</span>.</p></fieldset></li>
+      </ol>
+      <aside class="quiz-side" aria-label="المعلمة Orieb G">
+        <figure class="og-card" data-pose="thinking" role="img" aria-label="المعلمة Orieb G تفكّر"><div class="og-fig"><img data-src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img class="on" src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">اختر إجابة، وسأشرح لك السبب فوراً.</p>
+      </aside>
+    </div>
+    <div class="quiz-foot"><p class="score" aria-live="polite"></p><button class="btn" type="button" data-reset>أعد الاختبار</button></div>
+  </section>
+
+  <section class="sec" id="videos" aria-labelledby="vid-t">
+    <h2 id="vid-t">فيديو المساق</h2>
+    <div class="vids">
+      <figure class="vid"><video controls preload="none" playsinline poster="../../assets/media/circuits-1-16x9-poster.jpg" width="1920" height="1080"><source src="../../assets/media/circuits-1-16x9.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/circuits-1-16x9.vtt" default></video><figcaption>ملخص مصغّر ⁦(16:9)⁩ · بلا تعليق صوتي، النص على الشاشة.</figcaption></figure>
+      <figure class="vid tall"><video controls preload="none" playsinline poster="../../assets/media/circuits-1-9x16-poster.jpg" width="1080" height="1920"><source src="../../assets/media/circuits-1-9x16.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/circuits-1-9x16.vtt" default></video><figcaption>مقطع تعريفي قصير ⁦(9:16)⁩.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="contact-t">
+  <div class="contact">
+    <div>
+      <span class="kicker">دروس خصوصية · مدرسة وجامعة</span>
+      <h2 id="contact-t">احجز درساً مع عريب</h2>
+      <p>فيزياء وكيمياء للصف العاشر والأول الثانوي والتوجيهي، ومواد جامعية من تخصصها: دوائر كهربائية 1، وإلكترونيات 1، و<span class="ltr">⁦C++⁩</span>، وفيزياء 1 و2. الحصص عن بُعد أو حضورياً، والمواعيد والتفاصيل يُتفق عليها مباشرة.</p>
+    </div>
+    <div class="ways">
+      <a class="btn primary" href="https://wa.me/962775853203" target="_blank" rel="noopener">واتساب<small class="ltr">⁦+962 77585 3203⁩</small></a>
+      <a class="btn" href="mailto:alzuotorieb9999@gmail.com?subject=%D8%AF%D8%B1%D9%88%D8%B3%20%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9">البريد الإلكتروني<small class="ltr">⁦alzuotorieb9999⁩@gmail.com</small></a>
+    </div>
+  </div>
+</section>
+  <p style="margin-top:28px"><a href="../../#university">← كل المواد الجامعية</a></p>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 عريب الزيوت · <span class="ltr">Orieb Alzyuot</span> · المعلمة Orieb G شخصية كرتونية أصلية صُمّمت لهذا الموقع.</p>
+    <p>المحتوى التعليمي مُعدّ بشكل مستقل ويتبع موضوعات المنهاج الأردني، وليس صادراً عن وزارة التربية والتعليم ولا معتمداً منها. لا يستخدم هذا الموقع ملفات تتبّع ولا أدوات إحصاء.</p>
+    <p><a href="https://oriebalzyuot96.github.io/ar/">الموقع الشخصي لعريب</a></p>
+  </div>
+</footer>
+<script type="module" src="../../assets/js/lesson.js"></script>
+</body>
+</html>

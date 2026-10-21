@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://oriebalzyuot96.github.io/lessons/university/cpp-basics/">
+<meta property="og:url" content="https://oriebalzyuot96.github.io/lessons/university/cpp-basics/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_JO">
+<meta property="og:image" content="https://oriebalzyuot96.github.io/lessons/assets/img/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="author" content="عريب الزيوت (Orieb Alzyuot)">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../../assets/fonts/plex-arabic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<title>⁦C++⁩ للمبتدئين · ⁦C++ for beginners⁩ · دروس Orieb G</title>
+<meta name="description" content="أول برنامج (#include , int main, std::cout / std::cin)، المتغيرات والأنواع، if / else، حلقة for، ودالة بسيطة، مع لوحة كود ومخرجات كل مثال.">
+<meta property="og:title" content="C++ للمبتدئين (C++ for beginners) · مع المعلمة Orieb G">
+<meta property="og:description" content="ملخص تفاعلي لمساق جامعي تمهيدي مع أمثلة محلولة واختبار قصير وفيديو.">
+</head>
+<body data-page="university">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<marker id="ah-y" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f6d365"/></marker>
+<marker id="ah-c" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9ad7e8"/></marker>
+<marker id="ah-p" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f7a8bd"/></marker>
+<marker id="ah-g" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#a6e3a1"/></marker>
+<marker id="ah-w" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#f4f1e8"/></marker>
+</defs></svg>
+<a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../"><i>OG</i><span>دروس Orieb G</span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="../../physics/newton-laws/" data-nav="physics">الفيزياء</a>
+      <a href="../../chemistry/mole/" data-nav="chemistry">الكيمياء</a>
+      <a href="../../#university" data-nav="university" aria-current="page">الجامعة</a>
+      <a href="../../#about" data-nav="about">عن عريب</a>
+      <a href="../../#contact" data-nav="contact">تواصل</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="lesson-hero" aria-labelledby="lesson-t">
+    <ul class="chips"><li>برمجة</li><li class="ltr">Programming</li><li>مساق جامعي تمهيدي</li><li>10 مشهداً · 5 أسئلة</li></ul>
+    <h1 id="lesson-t">⁦C++⁩ للمبتدئين <span class="en-sub ltr">⁦C++ for beginners⁩</span></h1>
+    <p class="lede">أول برنامج <span class="en" dir="ltr">(#include <iostream>, int main, std::cout / std::cin)</span>، المتغيرات والأنواع، <span class="en" dir="ltr">if / else</span>، حلقة <span class="en" dir="ltr">for</span>، ودالة بسيطة، مع لوحة كود ومخرجات كل مثال.</p>
+    <p class="note" role="note"><span aria-hidden="true">🎓</span><span><b>ملاحظة:</b> ملخص تمهيدي لموضوعات مساق جامعي، والمصطلحات بالإنجليزية كما تُدرَّس عادةً في الجامعات الأردنية. طابِقه مع مخطط المساق <span class="ltr">(syllabus)</span> والمرجع المعتمد في جامعتك. المقاطع البرمجية مكتوبة بـ ⁦C++⁩ قياسية ومتتبَّعة يدوياً؛ لم يتوفر مترجم على جهاز الإعداد لتشغيلها.</span></p>
+  </section>
+
+  <section class="stage" data-stage aria-label="الدرس مشهداً مشهداً">
+    <div class="stage-tools"><span class="counter" aria-live="polite"></span><button class="btn" type="button" data-all aria-pressed="false">عرض الدرس كاملاً</button></div>
+    <div class="stage-grid">
+      <div class="teacher">
+        <figure class="og-card" data-pose="explaining" role="img" aria-label="المعلمة Orieb G تشرح"><div class="og-fig"><img class="on" src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">أهلاً بك! أنا المعلمة Orieb G.</p>
+      </div>
+      <div class="scenes">
+        <article class="scene" id="s1" data-pose="explaining" aria-labelledby="s1-t">
+          <div class="board"><h2 id="s1-t">⁦C++⁩ للمبتدئين</h2><ol class="steps"><li>أول برنامج والإخراج <span class="en" dir="ltr">std::cout</span>.</li><li>المتغيرات والأنواع والإدخال <span class="en" dir="ltr">std::cin</span>.</li><li>القسمة الصحيحة، و<span class="en" dir="ltr">if / else</span>، وحلقة <span class="en" dir="ltr">for</span>.</li><li>دالة بسيطة <span class="en" dir="ltr">(function)</span>.</li></ol></div>
+          <p class="say">أهلاً! أنا المعلمة Orieb G. سنكتب معاً أول برامجك بلغة ⁦C++⁩ خطوة بخطوة.</p>
+        </article>
+
+        <article class="scene" id="s2" data-pose="pointing" aria-labelledby="s2-t">
+          <div class="board"><h2 id="s2-t">أول برنامج <span class="en" dir="ltr">(Hello)</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>hello.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"Hello, Orieb G!\n"</span>;
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="4.1461538461538465"><span class="term-p">$ ./a.out</span>
+Hello, Orieb G!</div></div><p><span class="en" dir="ltr">#include <iostream></span>: مكتبة الإدخال والإخراج. <span class="en" dir="ltr">int main()</span>: نقطة بداية البرنامج. <span class="en" dir="ltr">⁦return 0⁩;</span>: انتهى بنجاح.</p></div>
+          <p class="say">كل برنامج يبدأ من الدالة main. نضمّن مكتبة iostream لنطبع باستخدام std::cout، ونعيد صفراً عند النجاح.</p>
+        </article>
+
+        <article class="scene" id="s3" data-pose="explaining" aria-labelledby="s3-t">
+          <div class="board"><h2 id="s3-t">المتغيرات والأنواع <span class="en" dir="ltr">(variables & types)</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>vars.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+<span class="c-inc">#include &lt;string&gt;</span>
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-kw">int</span> age = <span class="c-num">20</span>;
+    <span class="c-kw">double</span> gpa = <span class="c-num">3.58</span>;
+    <span class="c-kw">char</span> grade = <span class="c-str">'A'</span>;
+    <span class="c-kw">bool</span> passed = <span class="c-kw">true</span>;
+    <span class="c-lib">std</span>::<span class="c-lib">string</span> name = <span class="c-str">"Sara"</span>;
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; name &lt;&lt; <span class="c-str">" "</span> &lt;&lt; age &lt;&lt; <span class="c-str">" "</span> &lt;&lt; gpa
+              &lt;&lt; <span class="c-str">" "</span> &lt;&lt; grade &lt;&lt; <span class="c-str">" "</span> &lt;&lt; passed &lt;&lt; <span class="c-str">"\n"</span>;
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="11.992307692307692"><span class="term-p">$ ./a.out</span>
+⁦Sara 20 3.58 A 1⁩</div></div></div>
+          <p class="say">لكل متغير نوع: int للأعداد الصحيحة، وdouble للكسور، وchar لحرف، وbool لصح أو خطأ، وstring للنصوص. لاحظ أن true تُطبع 1.</p>
+        </article>
+
+        <article class="scene" id="s4" data-pose="pointing" aria-labelledby="s4-t">
+          <div class="board"><h2 id="s4-t">الإدخال <span class="en" dir="ltr">(input)</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>input.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-kw">int</span> age;
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"Enter your age: "</span>;
+    <span class="c-lib">std</span>::<span class="c-lib">cin</span> &gt;&gt; age;
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"Next year you will be "</span> &lt;&lt; age + <span class="c-num">1</span> &lt;&lt; <span class="c-str">"\n"</span>;
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="7.800000000000001"><span class="term-p">$ ./a.out</span>
+⁦Enter your age: 19⁩
+⁦Next year you will be 20⁩</div></div><p>المخرجات عند إدخال <span class="eq">19</span>.</p></div>
+          <p class="say">نقرأ من لوحة المفاتيح بـ std::cin. إذا أدخل المستخدم 19 يطبع البرنامج 20.</p>
+        </article>
+
+        <article class="scene" id="s5" data-pose="surprised" aria-labelledby="s5-t">
+          <div class="board"><h2 id="s5-t">القسمة الصحيحة <span class="en" dir="ltr">(integer division)</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>division.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-num">7</span> / <span class="c-num">2</span> &lt;&lt; <span class="c-str">"\n"</span>;    <span class="c-com">// integer division</span>
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-num">7</span> / <span class="c-num">2.0</span> &lt;&lt; <span class="c-str">"\n"</span>;  <span class="c-com">// double division</span>
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-num">7</span> % <span class="c-num">2</span> &lt;&lt; <span class="c-str">"\n"</span>;    <span class="c-com">// remainder</span>
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="8.723076923076924"><span class="term-p">$ ./a.out</span>
+3
+3.5
+1</div></div></div>
+          <p class="say">سبعة على اثنين تساوي 3 لا 3.5 لأن العددين صحيحان! إذا كان أحدهما كسرياً نحصل على 3.5، والعملية % تعطي الباقي.</p>
+        </article>
+
+        <article class="scene" id="s6" data-pose="explaining" aria-labelledby="s6-t">
+          <div class="board"><h2 id="s6-t">الشرط <span class="en" dir="ltr">if / else</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>grade.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-kw">int</span> mark = <span class="c-num">85</span>;
+    <span class="c-kw">if</span> (mark &gt;= <span class="c-num">90</span>) {
+        <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"A\n"</span>;
+    } <span class="c-kw">else</span> <span class="c-kw">if</span> (mark &gt;= <span class="c-num">80</span>) {
+        <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"B\n"</span>;
+    } <span class="c-kw">else</span> {
+        <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"C or below\n"</span>;
+    }
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="9.684615384615386"><span class="term-p">$ ./a.out</span>
+B</div></div></div>
+          <p class="say">نختبر الشروط بالترتيب: 85 ليست أكبر من أو تساوي 90، لكنها أكبر من أو تساوي 80، فيطبع B.</p>
+        </article>
+
+        <article class="scene" id="s7" data-pose="pointing" aria-labelledby="s7-t">
+          <div class="board"><h2 id="s7-t">الحلقة <span class="en" dir="ltr">for</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>squares.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-kw">for</span> (<span class="c-kw">int</span> i = <span class="c-num">1</span>; i &lt;= <span class="c-num">5</span>; ⁦i++⁩) {
+        <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; i * i &lt;&lt; <span class="c-str">" "</span>;
+    }
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; <span class="c-str">"\n"</span>;
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="6.492307692307693"><span class="term-p">$ ./a.out</span>
+⁦1 4 9 16 25⁩</div></div><p><span class="en" dir="ltr">for (init; condition; update)</span>: التهيئة مرة واحدة، ثم الشرط قبل كل دورة، ثم التحديث بعدها.</p></div>
+          <p class="say">حلقة for تكرر الأوامر: نبدأ من 1 ونستمر حتى 5، ونطبع مربع كل رقم: 1 و4 و9 و16 و25.</p>
+        </article>
+
+        <article class="scene" id="s8" data-pose="explaining" aria-labelledby="s8-t">
+          <div class="board"><h2 id="s8-t">الدوال <span class="en" dir="ltr">(functions)</span></h2><div class="two code-two"><div class="code" dir="ltr"><div class="code-bar"><i></i><i></i><i></i><span>area.cpp</span></div><pre data-type="0.4,26"><span class="c-inc">#include &lt;iostream&gt;</span>
+
+<span class="c-kw">double</span> area(<span class="c-kw">double</span> r) {
+    <span class="c-kw">return</span> <span class="c-num">3.14159</span> * r * r;
+}
+
+<span class="c-kw">int</span> <span class="c-lib">main</span>() {
+    <span class="c-lib">std</span>::<span class="c-lib">cout</span> &lt;&lt; area(<span class="c-num">2.0</span>) &lt;&lt; <span class="c-str">"\n"</span>;
+    <span class="c-kw">return</span> <span class="c-num">0</span>;
+}</pre></div><div class="term" dir="ltr" data-at="6.184615384615386"><span class="term-p">$ ./a.out</span>
+12.5664</div></div><p><span class="eq">⁦3.14159 × 2 × 2 = 12.56636⁩</span>، و<span class="en" dir="ltr">std::cout</span> يطبع افتراضياً 6 أرقام معنوية: <span class="eq">12.5664</span>.</p></div>
+          <p class="say">الدالة تأخذ مدخلات وتعيد نتيجة. area تحسب مساحة دائرة نصف قطرها 2، وتطبع cout الناتج بست خانات معنوية: 12.5664.</p>
+        </article>
+
+        <article class="scene" id="s9" data-pose="thinking" aria-labelledby="s9-t">
+          <div class="board"><h2 id="s9-t">أخطاء شائعة</h2><ul class="myth"><li data-at="0.4"><span class="x">✗ نسيان الفاصلة المنقوطة ;</span> <span class="v">✓</span> كل تعليمة تنتهي بـ ;</li><li data-at="1.6"><span class="x">✗ ⁦if (x = 5)⁩</span> <span class="v">✓</span> المقارنة بـ ⁦== : if (x == 5)⁩</li><li data-at="2.8"><span class="x">✗ ⁦7 / 2 = 3.5⁩</span> <span class="v">✓</span> مع ⁦int: 7 / 2 = 3⁩</li><li data-at="4.0"><span class="x">✗ متغير بلا قيمة ابتدائية.</span> <span class="v">✓</span> ابدأ كل متغير بقيمة: ⁦int sum = 0⁩;</li></ul></div>
+          <p class="say">أكثر الأخطاء: نسيان الفاصلة المنقوطة، واستخدام = بدل == في المقارنة، والقسمة الصحيحة، ومتغيرات بلا قيمة ابتدائية.</p>
+        </article>
+
+        <article class="scene" id="s10" data-pose="happy" aria-labelledby="s10-t">
+          <div class="board"><h2 id="s10-t">الخلاصة</h2><ul><li><span class="en" dir="ltr">#include <iostream></span> و<span class="en" dir="ltr">int main()</span> و<span class="en" dir="ltr">std::cout / std::cin</span>.</li><li>الأنواع: <span class="en" dir="ltr">int, double, char, bool, std::string</span>.</li><li><span class="en" dir="ltr">if / else</span>، و<span class="en" dir="ltr">for</span>، والدوال.</li></ul></div>
+          <p class="say">ممتاز! كتبت أول برامجك. جرّب الاختبار القصير على الموقع، ونكمل معاً المصفوفات والدوال المتقدمة.</p>
+        </article>
+      </div>
+    </div>
+    <nav class="stage-nav" aria-label="التنقل بين المشاهد">
+      <button class="btn" type="button" data-prev>→ السابق</button>
+      <ol class="dots"></ol>
+      <button class="btn primary" type="button" data-next>التالي ←</button>
+    </nav>
+  </section>
+
+  <section class="sec" id="quiz" data-quiz aria-labelledby="quiz-t">
+    <span class="kicker">5 أسئلة · تصحيح فوري</span>
+    <h2 id="quiz-t">اختبر نفسك: ⁦C++⁩ للمبتدئين</h2>
+    <div class="quiz-grid">
+      <ol class="qs">
+        <li><fieldset><legend>ماذا يطبع <span class="en" dir="ltr">std::cout << 7 / 2;</span>؟</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">3.5</span></button><button class="opt" type="button" data-ok><span class="ltr">3</span></button><button class="opt" type="button"><span class="ltr">4</span></button><button class="opt" type="button"><span class="ltr">1</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b>العددان من نوع <span class="en" dir="ltr">int</span> فالقسمة صحيحة: <span class="eq">3</span>.</p></fieldset></li>
+        <li><fieldset><legend>أي مكتبة نضمّنها لاستخدام <span class="en" dir="ltr">std::cout</span>؟</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr"><string></span></button><button class="opt" type="button"><span class="ltr"><cout></span></button><button class="opt" type="button" data-ok><span class="ltr"><iostream></span></button><button class="opt" type="button"><span class="ltr"><stdio></span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="en" dir="ltr">#include <iostream></span>.</p></fieldset></li>
+        <li><fieldset><legend>ماذا يطبع <span class="en" dir="ltr">⁦for (int i = 0; i⁩ < 3; i++) std::cout << i;</span>؟</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">123</span></button><button class="opt" type="button" data-ok><span class="ltr">012</span></button><button class="opt" type="button"><span class="ltr">0123</span></button><button class="opt" type="button"><span class="ltr">01</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="en" dir="ltr">i</span> تأخذ 0 ثم 1 ثم 2، وتتوقف عند 3.</p></fieldset></li>
+        <li><fieldset><legend><span class="en" dir="ltr">⁦int x = 5; if (x > 3) std::cout⁩ << "A"; else std::cout << "B";</span> يطبع:</legend><div class="opts">
+          <button class="opt" type="button" data-ok><span class="ltr">A</span></button><button class="opt" type="button"><span class="ltr">B</span></button><button class="opt" type="button"><span class="ltr">AB</span></button><button class="opt" type="button"><span class="ltr">لا شيء</span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="eq">⁦5 > 3⁩</span> صحيح فيُنفّذ فرع <span class="en" dir="ltr">if</span>.</p></fieldset></li>
+        <li><fieldset><legend>عامل المقارنة بالمساواة في ⁦C++⁩ هو:</legend><div class="opts">
+          <button class="opt" type="button"><span class="ltr">=</span></button><button class="opt" type="button"><span class="ltr">===</span></button><button class="opt" type="button" data-ok><span class="ltr">==</span></button><button class="opt" type="button"><span class="ltr">=></span></button></div>
+          <p class="fb" hidden><b class="verdict"></b><span class="en" dir="ltr">==</span> للمقارنة، و<span class="en" dir="ltr">=</span> للإسناد.</p></fieldset></li>
+      </ol>
+      <aside class="quiz-side" aria-label="المعلمة Orieb G">
+        <figure class="og-card" data-pose="thinking" role="img" aria-label="المعلمة Orieb G تفكّر"><div class="og-fig"><img data-src="../../assets/img/og/explaining.jpg" data-pose="explaining" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/pointing.jpg" data-pose="pointing" alt="" width="640" height="640" decoding="async"><img class="on" src="../../assets/img/og/thinking.jpg" data-pose="thinking" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/surprised.jpg" data-pose="surprised" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/happy.jpg" data-pose="happy" alt="" width="640" height="640" decoding="async"><img data-src="../../assets/img/og/encouraging.jpg" data-pose="encouraging" alt="" width="640" height="640" decoding="async"></div></figure>
+        <p class="bubble" aria-live="polite">اختر إجابة، وسأشرح لك السبب فوراً.</p>
+      </aside>
+    </div>
+    <div class="quiz-foot"><p class="score" aria-live="polite"></p><button class="btn" type="button" data-reset>أعد الاختبار</button></div>
+  </section>
+
+  <section class="sec" id="videos" aria-labelledby="vid-t">
+    <h2 id="vid-t">فيديو المساق</h2>
+    <div class="vids">
+      <figure class="vid"><video controls preload="none" playsinline poster="../../assets/media/cpp-basics-16x9-poster.jpg" width="1920" height="1080"><source src="../../assets/media/cpp-basics-16x9.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/cpp-basics-16x9.vtt" default></video><figcaption>ملخص مصغّر ⁦(16:9)⁩ · بلا تعليق صوتي، النص على الشاشة.</figcaption></figure>
+      <figure class="vid tall"><video controls preload="none" playsinline poster="../../assets/media/cpp-basics-9x16-poster.jpg" width="1080" height="1920"><source src="../../assets/media/cpp-basics-9x16.mp4" type="video/mp4"><track kind="captions" srclang="ar" label="العربية" src="../../assets/media/cpp-basics-9x16.vtt" default></video><figcaption>مقطع تعريفي قصير ⁦(9:16)⁩.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="contact" aria-labelledby="contact-t">
+  <div class="contact">
+    <div>
+      <span class="kicker">دروس خصوصية · مدرسة وجامعة</span>
+      <h2 id="contact-t">احجز درساً مع عريب</h2>
+      <p>فيزياء وكيمياء للصف العاشر والأول الثانوي والتوجيهي، ومواد جامعية من تخصصها: دوائر كهربائية 1، وإلكترونيات 1، و<span class="ltr">⁦C++⁩</span>، وفيزياء 1 و2. الحصص عن بُعد أو حضورياً، والمواعيد والتفاصيل يُتفق عليها مباشرة.</p>
+    </div>
+    <div class="ways">
+      <a class="btn primary" href="https://wa.me/962775853203" target="_blank" rel="noopener">واتساب<small class="ltr">⁦+962 77585 3203⁩</small></a>
+      <a class="btn" href="mailto:alzuotorieb9999@gmail.com?subject=%D8%AF%D8%B1%D9%88%D8%B3%20%D8%AE%D8%B5%D9%88%D8%B5%D9%8A%D8%A9">البريد الإلكتروني<small class="ltr">⁦alzuotorieb9999⁩@gmail.com</small></a>
+    </div>
+  </div>
+</section>
+  <p style="margin-top:28px"><a href="../../#university">← كل المواد الجامعية</a></p>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>© 2026 عريب الزيوت · <span class="ltr">Orieb Alzyuot</span> · المعلمة Orieb G شخصية كرتونية أصلية صُمّمت لهذا الموقع.</p>
+    <p>المحتوى التعليمي مُعدّ بشكل مستقل ويتبع موضوعات المنهاج الأردني، وليس صادراً عن وزارة التربية والتعليم ولا معتمداً منها. لا يستخدم هذا الموقع ملفات تتبّع ولا أدوات إحصاء.</p>
+    <p><a href="https://oriebalzyuot96.github.io/ar/">الموقع الشخصي لعريب</a></p>
+  </div>
+</footer>
+<script type="module" src="../../assets/js/lesson.js"></script>
+</body>
+</html>
